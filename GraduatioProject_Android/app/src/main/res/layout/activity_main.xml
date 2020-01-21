@@ -5,69 +5,8 @@
     android:gravity="center"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@drawable/bg_welcome">
-
-    <LinearLayout
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:background="@drawable/bg_welcome2">
-        <View
-            android:layout_width="5dp"
-            android:layout_height="8dp">
-        </View>
-        <ImageView
-            android:layout_width="140dp"
-            android:layout_height="140dp"
-            android:background="@drawable/bg_welcome1">
-        </ImageView>
-    </LinearLayout>
-
-    <View
-        android:layout_width="300dp"
-        android:layout_height="20dp">
-    </View>
-
-    <LinearLayout
-        android:layout_width="240dp"
-        android:layout_height="60dp"
-        android:orientation="horizontal"
-        android:gravity="center">
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="60dp"
-            android:text="安"
-            android:textSize="36dp"
-            android:gravity="center">
-        </TextView>
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="60dp"
-            android:text="全"
-            android:textSize="36dp"
-            android:gravity="center">
-        </TextView>
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="60dp"
-            android:text="卫"
-            android:textSize="36dp"
-            android:gravity="center">
-        </TextView>
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="60dp"
-            android:text="士"
-            android:textSize="36dp"
-            android:gravity="center">
-        </TextView>
-    </LinearLayout>
-
-    <View
-        android:layout_width="150dp"
-        android:layout_height="180dp">
-    </View>
+    tools:context=".LoginAndRegister.MainActivity"
+    android:background="@drawable/bg_welcome"
+    android:id="@+id/Jump">
 
 </LinearLayout>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="@drawable/bg_register"
+    tools:context=".LoginAndRegister.RegisterActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="用  户  名："
+                android:textSize="20dp"
+                android:gravity="center"
+                />
+
+            <EditText
+                android:id="@+id/register_usernameET"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:background="@drawable/style_input"
+                android:hint="不能为空"
+                android:textSize="16dp"
+                android:singleLine="true"
+                android:textCursorDrawable="@drawable/style_cursor"
+                />
+
+        </TableRow>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            />
+
+        <TableRow
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="密        码："
+                android:textSize="20dp"
+                android:gravity="center"
+                />
+
+            <EditText
+                android:id="@+id/register_passwordET"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:background="@drawable/style_input"
+                android:inputType="textPassword"
+                android:hint="6-15位密码"
+                android:textSize="16dp"
+                android:singleLine="true"
+                android:textCursorDrawable="@drawable/style_cursor"
+                />
+
+        </TableRow>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            />
+        <TableRow
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="确认密码："
+                android:textSize="20dp"
+                android:gravity="center"
+                />
+
+            <EditText
+                android:id="@+id/queryPasswordET"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:background="@drawable/style_input"
+                android:inputType="textPassword"
+                android:hint="与密码相同"
+                android:textSize="16dp"
+                android:singleLine="true"
+                android:textCursorDrawable="@drawable/style_cursor"
+                />
+
+        </TableRow>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            />
+
+        <TableRow
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="联系方式："
+                android:textSize="20dp"
+                android:gravity="center"
+                />
+
+            <EditText
+                android:id="@+id/phoneET"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:background="@drawable/style_input"
+                android:hint="11位联系方式"
+                android:textSize="16dp"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textCursorDrawable="@drawable/style_cursor"
+                />
+
+        </TableRow>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            />
+
+        <TableRow
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="邮        箱："
+                android:textSize="20dp"
+                android:gravity="center"
+                />
+
+            <EditText
+                android:id="@+id/emailET"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:background="@drawable/style_input"
+                android:hint="邮箱"
+                android:textSize="16dp"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textCursorDrawable="@drawable/style_cursor"
+                />
+
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+
+        <Button
+            android:id="@+id/registerBtn"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="注册"
+            android:textSize="20dp"
+            android:background="@drawable/style_button"
+            />
+    </LinearLayout>
+
+</LinearLayout>

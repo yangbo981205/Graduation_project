@@ -16,14 +16,14 @@ import java.util.TimerTask;
 public class MainActivity extends AppCompatActivity {
 
     private LinearLayout jumpLayout=null;
-    private long DELAY = 3800;
+    private long DELAY = 4290;
     int flag=0;/**避免两种跳转方式冲突*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getWindow().setStatusBarColor(0xffb8cab0);
+        getWindow().setStatusBarColor(0xffDADADA);
 
         jumpLayout=(LinearLayout)findViewById(R.id.Jump);
 

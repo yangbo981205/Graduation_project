@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.graduatioproject_android.R;
+import com.example.graduatioproject_android.tools.FragmentManager;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -46,7 +47,8 @@ public class LoginActivity extends AppCompatActivity {
         public void onClick(View view) {
             switch (view.getId()){
                 case(R.id.loginBtn):
-                    Toast.makeText(LoginActivity.this,"login",Toast.LENGTH_LONG).show();
+                    Intent jumpIntent1=new Intent(LoginActivity.this, FragmentManager.class);
+                    startActivity(jumpIntent1);
                     break;
                 case(R.id.registerTV):
                     Intent jumpIntent2=new Intent(LoginActivity.this, RegisterActivity.class);

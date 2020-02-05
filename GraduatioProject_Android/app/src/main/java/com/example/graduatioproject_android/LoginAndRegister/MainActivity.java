@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         getWindow().setStatusBarColor(0xffDADADA);
 
+
         jumpLayout=(LinearLayout)findViewById(R.id.Jump);
 
         /**

@@ -6,12 +6,65 @@
     android:orientation="vertical"
     tools:context=".tools.FragmentManager">
 
-    <TextView
+    <LinearLayout
+        android:id="@+id/layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="home"
-        android:textSize="100dp"
+        android:layout_height="55dp"
+        android:gravity="center"
+        android:background="@drawable/bg_top"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:text="室内环境"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:gravity="left|center"
+            >
+        </TextView>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#e4e4e4"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
         >
-    </TextView>
+        <TextView
+            android:id="@+id/RealtimeEnvironment"
+            android:layout_width="1dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:background="@drawable/menu_background"
+            android:text="实时环境"
+            android:textSize="18dp"
+            android:textColor="@drawable/menu_text_style"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/RecordEnvironment"
+            android:layout_width="1dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:background="@drawable/menu_background"
+            android:text="环境记录"
+            android:textSize="18dp"
+            android:textColor="@drawable/menu_text_style"
+            android:gravity="center"
+            />
+    </LinearLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/ChildViewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    </androidx.viewpager.widget.ViewPager>
 
 </LinearLayout>

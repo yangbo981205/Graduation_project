@@ -6,6 +6,25 @@
     android:orientation="vertical"
     tools:context=".tools.FragmentManager">
 
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:gravity="center"
+        android:background="@drawable/bg_top"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:text="控制与监控"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:gravity="left|center"
+            >
+        </TextView>
+    </LinearLayout>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

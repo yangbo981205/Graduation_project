@@ -36,6 +36,7 @@ public class FragmentManager extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragment_manager);
+        getWindow().setStatusBarColor(0xffCBB59D);
 
         homeTv=(TextView) findViewById(R.id.homeTV);
         controlTv=(TextView) findViewById(R.id.controlTV);

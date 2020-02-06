@@ -6,12 +6,18 @@
     android:orientation="vertical"
     tools:context=".tools.FragmentManager">
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#5b5b5b">
+    </View>
+
     <LinearLayout
         android:id="@+id/layout"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:gravity="center"
-        android:background="@drawable/bg_top"
+        android:background="#3c3c3c"
         android:orientation="horizontal">
 
         <TextView
@@ -20,6 +26,7 @@
             android:text="室内环境"
             android:textSize="20dp"
             android:textStyle="bold"
+            android:textColor="#ffffff"
             android:gravity="left|center"
             >
         </TextView>

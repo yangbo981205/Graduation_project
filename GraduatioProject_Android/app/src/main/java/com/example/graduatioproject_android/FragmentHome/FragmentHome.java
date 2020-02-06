@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -21,6 +20,9 @@ import com.example.graduatioproject_android.R;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.example.graduatioproject_android.tools.GlobalVariable.ISVISIBLE;
+
 
 public class FragmentHome extends Fragment {
 
@@ -61,7 +63,7 @@ public class FragmentHome extends Fragment {
 
         /**
          * Viewpager的事件监听
-         * 滑动Viewpager时改变底部按钮
+         * 滑动Viewpager时改变顶部按钮
          * */
         ChildViewpager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -75,6 +77,7 @@ public class FragmentHome extends Fragment {
                         RecordEnvironment.setSelected(false);
                         break;
                     case 1:
+                        ISVISIBLE=true;
                         RealtimeEnvironment.setSelected(false);
                         RecordEnvironment.setSelected(true);
                         break;
@@ -92,7 +95,6 @@ public class FragmentHome extends Fragment {
         return  view;
     }
 
-
     /**
      * 按钮事件监听
      * */
@@ -107,6 +109,7 @@ public class FragmentHome extends Fragment {
                     break;
                 case(R.id.RecordEnvironment):
                     setSelected();
+                    ISVISIBLE=true;
                     RecordEnvironment.setSelected(true);
                     ChildViewpager.setCurrentItem(1, true);
                     break;

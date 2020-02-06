@@ -17,6 +17,8 @@ import com.example.graduatioproject_android.FragmentMy.FragmentMy;
 import com.example.graduatioproject_android.FragmentOutdoor.FragmentOutdoor;
 import com.example.graduatioproject_android.R;
 
+import static com.example.graduatioproject_android.tools.GlobalVariable.ISVISIBLE;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,7 +38,7 @@ public class FragmentManager extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragment_manager);
-        getWindow().setStatusBarColor(0xffCBB59D);
+        getWindow().setStatusBarColor(0xff4f4f4f);
 
         homeTv=(TextView) findViewById(R.id.homeTV);
         controlTv=(TextView) findViewById(R.id.controlTV);
@@ -44,6 +46,7 @@ public class FragmentManager extends FragmentActivity {
         myTv=(TextView) findViewById(R.id.myTV);
         myViewpager=(ViewPager)findViewById(R.id.myViewpager);
 
+        ISVISIBLE=true;
         myListener=new MyListener();
         homeTv.setOnClickListener(myListener);
         controlTv.setOnClickListener(myListener);

@@ -2,14 +2,1100 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:gravity="center">
 
-    <TextView
+    <!--一个8个控件-->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="FragmentRealtimeEnvironment"
-        android:textSize="100dp"
+        android:layout_height="65dp"
+        android:orientation="horizontal"
+        android:gravity="center"
         >
-    </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#00000000"
+            android:gravity="center"
+            android:text="烟雾浓度："
+            android:textSize="28dp"
+            android:textStyle="bold"
+            android:textColor="#5b5b5b">
+        </TextView>
+
+        <TextView
+            android:id="@+id/SmokeScope"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#00000000"
+            android:gravity="center"
+            android:text="---- ppm"
+            android:textSize="34dp"
+            android:textStyle="bold">
+        </TextView>
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="380dp"
+        android:layout_height="15dp"
+        android:background="@drawable/bg_cut"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/temperature_c"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="right">
+                <LinearLayout
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:gravity="top|right"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:layout_width="35dp"
+                        android:layout_height="24dp"
+                        android:text="℃"
+                        android:textSize="16dp"
+                        android:gravity="right"
+                        android:textColor="#000000">
+                    </TextView>
+                    <TextView
+                        android:layout_width="35dp"
+                        android:layout_height="44dp"
+                        android:text="60"
+                        android:textSize="12dp"
+                        android:gravity="right"
+                        android:textColor="#000000">
+                    </TextView>
+                    <TextView
+                        android:layout_width="35dp"
+                        android:layout_height="43dp"
+                        android:text="50"
+                        android:textSize="12dp"
+                        android:gravity="right"
+                        android:textColor="#000000">
+                    </TextView>
+                    <TextView
+                        android:layout_width="35dp"
+                        android:layout_height="44dp"
+                        android:text="40"
+                        android:textSize="12dp"
+                        android:gravity="right"
+                        android:textColor="#000000">
+                    </TextView>
+                    <TextView
+                        android:layout_width="35dp"
+                        android:layout_height="43dp"
+                        android:text="30"
+                        android:textSize="12dp"
+                        android:gravity="right"
+                        android:textColor="#000000">
+                    </TextView>
+                    <TextView
+                        android:layout_width="35dp"
+                        android:layout_height="44dp"
+                        android:text="20"
+                        android:textSize="12dp"
+                        android:gravity="right"
+                        android:textColor="#000000">
+                    </TextView>
+                    <TextView
+                        android:layout_width="35dp"
+                        android:layout_height="43dp"
+                        android:text="10"
+                        android:textSize="12dp"
+                        android:gravity="right"
+                        android:textColor="#000000">
+                    </TextView>
+                    <TextView
+                        android:layout_width="35dp"
+                        android:layout_height="44dp"
+                        android:text="0"
+                        android:textSize="12dp"
+                        android:gravity="right"
+                        android:textColor="#ce0000">
+                    </TextView>
+                    <TextView
+                        android:layout_width="35dp"
+                        android:layout_height="43dp"
+                        android:text="-10"
+                        android:textSize="12dp"
+                        android:gravity="right"
+                        android:textColor="#000000">
+                    </TextView>
+                    <TextView
+                        android:layout_width="35dp"
+                        android:layout_height="44dp"
+                        android:text="-20"
+                        android:textSize="12dp"
+                        android:gravity="right"
+                        android:textColor="#000000">
+                    </TextView>
+                </LinearLayout><!--摄氏度数值-->
+                <LinearLayout
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center|right"
+                    android:orientation="vertical"
+                    >
+                    <View android:layout_width="12dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="9dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="12dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="9dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="12dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="9dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="12dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="9dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="12dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="9dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="12dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="9dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="12dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="9dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="12dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="9dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="12dp" android:layout_height="2dp" android:background="#000000"></View>
+                </LinearLayout><!--摄氏度刻度-->
+            </LinearLayout><!--摄氏度-->
+
+            <LinearLayout
+                android:layout_width="20dp"
+                android:layout_height="380dp"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                >
+                <ProgressBar
+                    android:id="@+id/progress_temperature"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:indeterminate="false"
+                    android:indeterminateOnly="false"
+                    android:max="100"
+                    android:progress="100"
+                    android:progressDrawable="@drawable/progress_vertical">
+                </ProgressBar>
+
+            </LinearLayout><!--进度条-->
+
+            <LinearLayout
+                android:id="@+id/temperature_f"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="left">
+                <LinearLayout
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center|left"
+                    android:orientation="vertical"
+                    >
+                    <View android:layout_width="12dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="9dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="12dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="9dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="12dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="9dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="12dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="9dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="12dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="9dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="12dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="9dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="12dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="9dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="12dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="9dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="12dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="9dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="12dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="9dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="12dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="9dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="12dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="9dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="12dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="9dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="12dp" android:layout_height="1dp" android:background="#ce0000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="12dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="9dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="12dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="9dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="12dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="9dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="1dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="1dp"></View>
+                    <View android:layout_width="12dp" android:layout_height="1dp" android:background="#000000"></View>
+
+
+
+                </LinearLayout><!--华氏度刻度-->
+                <LinearLayout
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:gravity="top|left"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="35dp"
+                        android:layout_height="24dp"
+                        android:text="℉"
+                        android:textSize="16dp"
+                        android:gravity="left"
+                        android:textColor="#000000">
+                    </TextView>
+                    <TextView
+                        android:layout_width="35dp"
+                        android:layout_height="44dp"
+                        android:text="160"
+                        android:textSize="12dp"
+                        android:gravity="left"
+                        android:textColor="#000000">
+                    </TextView>
+                    <TextView
+                        android:layout_width="35dp"
+                        android:layout_height="43dp"
+                        android:text="140"
+                        android:textSize="12dp"
+                        android:gravity="left"
+                        android:textColor="#000000">
+                    </TextView>
+                    <TextView
+                        android:layout_width="35dp"
+                        android:layout_height="44dp"
+                        android:text="120"
+                        android:textSize="12dp"
+                        android:gravity="left"
+                        android:textColor="#000000">
+                    </TextView>
+                    <TextView
+                        android:layout_width="35dp"
+                        android:layout_height="43dp"
+                        android:text="100"
+                        android:textSize="12dp"
+                        android:gravity="left"
+                        android:textColor="#000000">
+                    </TextView>
+                    <TextView
+                        android:layout_width="35dp"
+                        android:layout_height="44dp"
+                        android:text="80"
+                        android:textSize="12dp"
+                        android:gravity="left"
+                        android:textColor="#000000">
+                    </TextView>
+                    <TextView
+                        android:layout_width="35dp"
+                        android:layout_height="43dp"
+                        android:text="60"
+                        android:textSize="12dp"
+                        android:gravity="left"
+                        android:textColor="#000000">
+                    </TextView>
+                    <TextView
+                        android:layout_width="35dp"
+                        android:layout_height="44dp"
+                        android:text="40"
+                        android:textSize="12dp"
+                        android:gravity="left"
+                        android:textColor="#000000">
+                    </TextView>
+                    <TextView
+                        android:layout_width="35dp"
+                        android:layout_height="43dp"
+                        android:text="20"
+                        android:textSize="12dp"
+                        android:gravity="left"
+                        android:textColor="#000000">
+                    </TextView>
+                    <TextView
+                        android:layout_width="35dp"
+                        android:layout_height="44dp"
+                        android:text="0"
+                        android:textSize="12dp"
+                        android:gravity="left"
+                        android:textColor="#000000">
+                    </TextView>
+                </LinearLayout><!--华氏度数值-->
+
+            </LinearLayout><!--华氏度-->
+
+        </LinearLayout><!--温度计-->
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="400dp"
+            android:background="#e4e4e4"/>
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="right">
+                <LinearLayout
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:gravity="top|right"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:layout_width="35dp"
+                        android:layout_height="24dp"
+                        android:text="%"
+                        android:textSize="16dp"
+                        android:gravity="right"
+                        android:textColor="#000000">
+                    </TextView>
+                    <TextView
+                        android:layout_width="35dp"
+                        android:layout_height="44dp"
+                        android:text="80"
+                        android:textSize="12dp"
+                        android:gravity="right"
+                        android:textColor="#000000">
+                    </TextView>
+                    <TextView
+                        android:layout_width="35dp"
+                        android:layout_height="43dp"
+                        android:text="70"
+                        android:textSize="12dp"
+                        android:gravity="right"
+                        android:textColor="#000000">
+                    </TextView>
+                    <TextView
+                        android:layout_width="35dp"
+                        android:layout_height="44dp"
+                        android:text="60"
+                        android:textSize="12dp"
+                        android:gravity="right"
+                        android:textColor="#000000">
+                    </TextView>
+                    <TextView
+                        android:layout_width="35dp"
+                        android:layout_height="43dp"
+                        android:text="50"
+                        android:textSize="12dp"
+                        android:gravity="right"
+                        android:textColor="#000000">
+                    </TextView>
+                    <TextView
+                        android:layout_width="35dp"
+                        android:layout_height="44dp"
+                        android:text="40"
+                        android:textSize="12dp"
+                        android:gravity="right"
+                        android:textColor="#000000">
+                    </TextView>
+                    <TextView
+                        android:layout_width="35dp"
+                        android:layout_height="43dp"
+                        android:text="30"
+                        android:textSize="12dp"
+                        android:gravity="right"
+                        android:textColor="#000000">
+                    </TextView>
+                    <TextView
+                        android:layout_width="35dp"
+                        android:layout_height="44dp"
+                        android:text="20"
+                        android:textSize="12dp"
+                        android:gravity="right"
+                        android:textColor="#000000">
+                    </TextView>
+                    <TextView
+                        android:layout_width="35dp"
+                        android:layout_height="43dp"
+                        android:text="10"
+                        android:textSize="12dp"
+                        android:gravity="right"
+                        android:textColor="#000000">
+                    </TextView>
+                    <TextView
+                        android:layout_width="35dp"
+                        android:layout_height="44dp"
+                        android:text="0"
+                        android:textSize="12dp"
+                        android:gravity="right"
+                        android:textColor="#000000">
+                    </TextView>
+                </LinearLayout><!--湿度数值-->
+                <LinearLayout
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center|right"
+                    android:orientation="vertical"
+                    >
+                    <View android:layout_width="12dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="9dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="12dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="9dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="12dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="9dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="12dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="9dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="12dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="9dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="12dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="9dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="12dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="9dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="12dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="9dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="6dp" android:layout_height="2dp" android:background="#000000"></View>
+                    <View android:layout_width="10dp" android:layout_height="2dp"></View>
+                    <View android:layout_width="12dp" android:layout_height="2dp" android:background="#000000"></View>
+                </LinearLayout><!--湿度刻度-->
+            </LinearLayout><!--湿度刻度及数值-->
+
+            <LinearLayout
+                android:layout_width="20dp"
+                android:layout_height="380dp"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                >
+                <ProgressBar
+                    android:id="@+id/progress_humidity"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:indeterminate="false"
+                    android:indeterminateOnly="false"
+                    android:max="100"
+                    android:progress="100"
+                    android:progressDrawable="@drawable/progress_verticals">
+                </ProgressBar>
+            </LinearLayout><!--进度条-->
+
+        </LinearLayout><!--湿度计-->
+
+    </LinearLayout> <!--不要打开-->
+
+    <View
+        android:layout_width="380dp"
+        android:layout_height="15dp"
+        android:background="@drawable/bg_cut"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="100dp"
+            android:background="#e4e4e4"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </LinearLayout>

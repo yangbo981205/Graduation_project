@@ -26,7 +26,6 @@ import static com.example.graduatioproject_android.tools.GlobalVariable.ISVISIBL
 
 public class FragmentHome extends Fragment {
 
-    private LinearLayout linearLayout=null;
     private TextView RealtimeEnvironment=null;
     private TextView RecordEnvironment=null;
     private ViewPager ChildViewpager=null;
@@ -39,13 +38,11 @@ public class FragmentHome extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, null);
 
-        linearLayout=(LinearLayout) view.findViewById(R.id.layout);
         RealtimeEnvironment=(TextView) view.findViewById(R.id.RealtimeEnvironment);
         RecordEnvironment=(TextView) view.findViewById(R.id.RecordEnvironment);
         ChildViewpager=(ViewPager) view.findViewById(R.id.ChildViewpager);
         myListener=new MyListener();
 
-        linearLayout.getBackground().setAlpha(255);
         RealtimeEnvironment.setOnClickListener(myListener);
         RecordEnvironment.setOnClickListener(myListener);
 

@@ -13,7 +13,6 @@
     </View>
 
     <LinearLayout
-        android:id="@+id/layout"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:gravity="center"
@@ -34,7 +33,7 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="3dp"
+        android:layout_height="2dp"
         android:background="#e4e4e4"/>
 
     <LinearLayout
@@ -66,6 +65,11 @@
             android:gravity="center"
             />
     </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#e4e4e4"/>
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/ChildViewpager"

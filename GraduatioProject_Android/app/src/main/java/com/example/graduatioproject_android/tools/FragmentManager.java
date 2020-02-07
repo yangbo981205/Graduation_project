@@ -8,6 +8,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,6 +31,7 @@ public class FragmentManager extends FragmentActivity {
     private TextView myTv=null;
     private ViewPager myViewpager=null;
     private MyListener myListener=null;
+    private LinearLayout LayoutAll =null;
     private long mPressedTime = 0;
 
     private FragmentTransaction fragmentTransaction;
@@ -45,6 +47,7 @@ public class FragmentManager extends FragmentActivity {
         outdoorTv=(TextView) findViewById(R.id.outdoorTV);
         myTv=(TextView) findViewById(R.id.myTV);
         myViewpager=(ViewPager)findViewById(R.id.myViewpager);
+        LayoutAll=(LinearLayout)findViewById(R.id.LayoutAll);
 
         ISVISIBLE=true;
         myListener=new MyListener();
@@ -52,6 +55,16 @@ public class FragmentManager extends FragmentActivity {
         controlTv.setOnClickListener(myListener);
         outdoorTv.setOnClickListener(myListener);
         myTv.setOnClickListener(myListener);
+
+
+        /**
+         * 设置主题,setBackgroundResource()参数类型为int，无法改变，所以应该写成函数在Theme中调用
+         * 设置全局变量，进入时设置默认值进行加载，在更改主题的Activity中进行全局变量的更换，实现
+         * 主题更换功能
+         * */
+        LayoutAll.setBackgroundResource(R.drawable.theme1);
+        LayoutAll.getBackground().setAlpha(80);
+
 
         // 获取片段管理器
         androidx.fragment.app.FragmentManager fragmentManager = getSupportFragmentManager();

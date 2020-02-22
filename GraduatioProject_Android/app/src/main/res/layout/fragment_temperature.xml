@@ -5,12 +5,67 @@
     android:orientation="vertical"
     >
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="temperature"
-        android:textSize="100dp"
-        >
-    </TextView>
+        android:layout_height="300dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="最后画折线图，弄不出来就去掉"
+            android:textSize="24dp">
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="编号"
+                android:textSize="18dp"
+                android:gravity="center"
+                />
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="时间"
+                android:textSize="18dp"
+                android:gravity="center"
+                />
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.1"
+                android:text="温度"
+                android:textSize="18dp"
+                android:gravity="center"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="#c9c9c9"/>
+
+        <ListView
+            android:id="@+id/temperature_ListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </ListView>
+
+    </LinearLayout>
 
 </LinearLayout>

@@ -62,7 +62,7 @@ public class FragmentManager extends FragmentActivity {
          * 设置全局变量，进入时设置默认值进行加载，在更改主题的Activity中进行全局变量的更换，实现
          * 主题更换功能
          * */
-        LayoutAll.setBackgroundResource(R.drawable.theme1);
+        LayoutAll.setBackgroundResource(R.drawable.theme_default);
         LayoutAll.getBackground().setAlpha(80);
 
 

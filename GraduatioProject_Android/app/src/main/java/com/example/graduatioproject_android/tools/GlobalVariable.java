@@ -4,9 +4,9 @@ import android.graphics.Point;
 
 public class GlobalVariable {
     public static String USERNAME=null;
-    public static String THEMEPICTURE=null;
-    public static String THEMESETALPHA=null;
+    public static int THEMEPICTURE=100;
     public static Boolean ISVISIBLE=true;
+    public static int FRAGMENTSELECT=0;
     public static long BUTTONVISIBLE=1000;
 
 

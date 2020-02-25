@@ -72,6 +72,8 @@ public class FragmentMy extends Fragment {
                     startActivity(head_jumpIntent);
                     break;
                 case(R.id.themeTV):
+                    Intent theme_jumpIntent=new Intent(getActivity(), ThemeActivity.class);
+                    startActivity(theme_jumpIntent);
                     break;
                 case(R.id.voiceTV):
                     break;

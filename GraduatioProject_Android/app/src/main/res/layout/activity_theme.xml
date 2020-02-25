@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".FragmentMy.ThemeActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="#3c3c3c">
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="30dp"/>
+                <TextView
+                    android:id="@+id/exitThemeTV"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@mipmap/icon_exit"
+                    />
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="30dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="主题选择"
+                    android:textSize="20dp"
+                    android:textColor="#f4f4f4"
+                    />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp">
+            </View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent">
+                </View>
+                <TextView
+                    android:id="@+id/theme0"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/theme_select0">
+                </TextView>
+                <View
+                    android:layout_width="6dp"
+                    android:layout_height="match_parent">
+                </View>
+                <TextView
+                    android:id="@+id/theme1"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/theme_select1">
+                </TextView>
+                <View
+                    android:layout_width="6dp"
+                    android:layout_height="match_parent">
+                </View>
+                <TextView
+                    android:id="@+id/theme2"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/theme_select2">
+                </TextView>
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent">
+                </View>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp">
+            </View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent">
+                </View>
+                <TextView
+                    android:id="@+id/theme3"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/theme_select3">
+                </TextView>
+                <View
+                    android:layout_width="6dp"
+                    android:layout_height="match_parent">
+                </View>
+                <TextView
+                    android:id="@+id/theme4"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/theme_select4">
+                </TextView>
+                <View
+                    android:layout_width="6dp"
+                    android:layout_height="match_parent">
+                </View>
+                <TextView
+                    android:id="@+id/theme5"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/theme_select5">
+                </TextView>
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent">
+                </View>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp">
+            </View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent">
+                </View>
+                <TextView
+                    android:id="@+id/theme6"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/theme_select6">
+                </TextView>
+                <View
+                    android:layout_width="6dp"
+                    android:layout_height="match_parent">
+                </View>
+                <TextView
+                    android:id="@+id/theme7"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/theme_select7">
+                </TextView>
+                <View
+                    android:layout_width="6dp"
+                    android:layout_height="match_parent">
+                </View>
+                <TextView
+                    android:id="@+id/theme8"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/theme_select8">
+                </TextView>
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent">
+                </View>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp">
+            </View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent">
+                </View>
+                <TextView
+                    android:id="@+id/theme9"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/theme_select9">
+                </TextView>
+                <View
+                    android:layout_width="6dp"
+                    android:layout_height="match_parent">
+                </View>
+                <TextView
+                    android:id="@+id/theme10"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/theme_select10">
+                </TextView>
+                <View
+                    android:layout_width="6dp"
+                    android:layout_height="match_parent">
+                </View>
+                <TextView
+                    android:id="@+id/theme11"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/theme_select11">
+                </TextView>
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent">
+                </View>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

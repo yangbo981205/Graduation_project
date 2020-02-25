@@ -14,6 +14,8 @@ import android.widget.Toast;
 import com.example.graduatioproject_android.R;
 import com.example.graduatioproject_android.tools.FragmentManager;
 
+import static com.example.graduatioproject_android.tools.GlobalVariable.FRAGMENTSELECT;
+
 public class LoginActivity extends AppCompatActivity {
 
     private EditText usernameEt;
@@ -48,6 +50,7 @@ public class LoginActivity extends AppCompatActivity {
             switch (view.getId()){
                 case(R.id.loginBtn):
                     Intent jumpIntent1=new Intent(LoginActivity.this, FragmentManager.class);
+                    FRAGMENTSELECT=0;
                     startActivity(jumpIntent1);
                     break;
                 case(R.id.registerTV):

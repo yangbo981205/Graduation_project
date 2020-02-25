@@ -3,8 +3,6 @@
     package="com.example.graduatioproject_android">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
@@ -14,8 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FragmentMy.HeadActivity"></activity>
-        <activity android:name=".FragmentHome.HomeFragment" />
+        <activity android:name=".FragmentMy.ThemeActivity"></activity>
+        <activity android:name=".FragmentMy.HeadActivity" />
+        <activity android:name=".FragmentHome.FragmentHome" />
         <activity android:name=".tools.FragmentManager" />
         <activity android:name=".LoginAndRegister.RegisterActivity" />
         <activity android:name=".LoginAndRegister.LoginActivity" />

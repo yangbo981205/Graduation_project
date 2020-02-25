@@ -24,6 +24,10 @@ import android.widget.TextView;
 import com.example.graduatioproject_android.R;
 import com.example.graduatioproject_android.tools.FragmentManager;
 
+import java.io.FileNotFoundException;
+
+import static com.example.graduatioproject_android.tools.GlobalVariable.FRAGMENTSELECT;
+
 public class HeadActivity extends AppCompatActivity {
 
     private static final int IMAGE = 1;
@@ -89,17 +93,26 @@ public class HeadActivity extends AppCompatActivity {
             Cursor c = getContentResolver().query(selectedImage, filePathColumns, null, null, null);
             c.moveToFirst();
             path = c.getString(c.getColumnIndex(MediaStore.Images.Media.DATA));
-            int columnIndex = c.getColumnIndex(filePathColumns[0]);
-            String imagePath = c.getString(columnIndex);
-            showImage(imagePath);
+
+            //使用decodeStream，而非decodeFile
+            try {
+                Bitmap bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(selectedImage));
+                HeadChangeIV.setImageBitmap(bitmap);
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+
+//            int columnIndex = c.getColumnIndex(filePathColumns[0]);
+//            String imagePath = c.getString(columnIndex);
+//            showImage(imagePath);
             c.close();
         }
     }
-    /**
-     * 加载图片
-     * */
-    private void showImage(String imagePath){
-        Bitmap bm = BitmapFactory.decodeFile(imagePath);
-        HeadChangeIV.setImageBitmap(bm);
-    }
+//    /**
+//     * 加载图片
+//     * */
+//    private void showImage(String imagePath){
+//        Bitmap bm = BitmapFactory.decodeFile(imagePath);
+//        HeadChangeIV.setImageBitmap(bm);
+//    }
 }

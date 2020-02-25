@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".FragmentMy.HeadActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="#3c3c3c">
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="30dp"/>
+                <TextView
+                    android:id="@+id/exitChangeTV"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@mipmap/icon_exit"
+                    />
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="30dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="修改信息"
+                    android:textSize="20dp"
+                    android:textColor="#f4f4f4"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+                <LinearLayout
+                    android:layout_width="350dp"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:text="昵称："
+                        android:textColor="#904f4f4f"
+                        android:gravity="center"
+                        android:textSize="18dp">
+
+                    </TextView>
+                    <EditText
+                        android:id="@+id/changeNicknameET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18dp"
+                        android:textCursorDrawable="@drawable/style_cursor"
+                        android:hint="请输入新昵称"
+                        />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <LinearLayout
+                    android:layout_width="350dp"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:text="头像:    "
+                        android:textColor="#904f4f4f"
+                        android:textSize="18dp"
+                        android:gravity="center"/>
+                    <Button
+                        android:id="@+id/selectPhotoBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:text="选择图片"
+                        android:textSize="20dp"
+                        android:textColor="#8000ff00"
+                        android:background="@drawable/style_button"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/HeadChangeIV"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+            <Button
+                android:id="@+id/affirmChangeBtn"
+                android:layout_width="320dp"
+                android:layout_height="40dp"
+                android:text="确认修改"
+                android:textSize="18dp"
+                android:background="@drawable/style_button_exit"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

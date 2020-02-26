@@ -2,6 +2,7 @@ package com.example.graduatioproject_android.FragmentMy;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.speech.tts.Voice;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -76,8 +77,12 @@ public class FragmentMy extends Fragment {
                     startActivity(theme_jumpIntent);
                     break;
                 case(R.id.voiceTV):
+                    Intent voice_jumpIntent=new Intent(getActivity(), VoiceActivity.class);
+                    startActivity(voice_jumpIntent);
                     break;
                 case(R.id.informTV):
+                    Intent inform_jumpIntent=new Intent(getActivity(), InformActivity.class);
+                    startActivity(inform_jumpIntent);
                     break;
                 case(R.id.sosLL):
                     break;

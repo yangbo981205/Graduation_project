@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".FragmentMy.VoiceActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#4f4f4f">
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="30dp"/>
+        <TextView
+            android:id="@+id/exitVoiceIV"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@mipmap/icon_exit"
+            />
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="30dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提示音"
+            android:textSize="20dp"
+            android:textColor="#f4f4f4"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/shengyin"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:text="声音"
+        >
+
+    </Button>
+    <Button
+        android:id="@+id/shengyin1"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:text="声音"
+        >
+
+    </Button>
+
+</LinearLayout>

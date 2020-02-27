@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FragmentMy.InformActivity"></activity>
+        <activity android:name=".FragmentMy.SectionActivity"></activity>
+        <activity android:name=".FragmentMy.InformActivity" />
         <activity android:name=".FragmentMy.VoiceActivity" />
         <activity android:name=".FragmentMy.ThemeActivity" />
         <activity android:name=".FragmentMy.HeadActivity" />

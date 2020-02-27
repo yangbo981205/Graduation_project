@@ -4,7 +4,7 @@ import android.graphics.Point;
 
 public class GlobalVariable {
     public static String USERNAME=null;
-    public static String MUSICNAME="music1";
+    public static String MUSICNAME=null;
     public static int THEMEPICTURE=100;
     public static Boolean ISVISIBLE=true;
     public static int FRAGMENTSELECT=0;

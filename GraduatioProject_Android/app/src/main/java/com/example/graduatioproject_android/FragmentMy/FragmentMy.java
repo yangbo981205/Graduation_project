@@ -1,5 +1,7 @@
 package com.example.graduatioproject_android.FragmentMy;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.speech.tts.Voice;
@@ -17,6 +19,8 @@ import androidx.fragment.app.Fragment;
 import com.example.graduatioproject_android.LoginAndRegister.LoginActivity;
 import com.example.graduatioproject_android.R;
 
+import java.util.Calendar;
+
 public class FragmentMy extends Fragment {
 
     private ImageView headIv=null;
@@ -32,6 +36,7 @@ public class FragmentMy extends Fragment {
     private Button exitloginBtn=null;
     private Button sectionBtn=null;
     private MyListener myListener=null;
+    private Calendar calendar=null;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -91,8 +96,19 @@ public class FragmentMy extends Fragment {
                 case(R.id.helpLL):
                     break;
                 case(R.id.aboutLL):
+                    AlertDialog.Builder builder=new AlertDialog.Builder(getActivity());
+                    builder.setTitle("关于");
+                    builder.setMessage("版本：1.0\n制作人：博0_oer~\n时间：2020.01.01");
+                    builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                        }
+                    });
+                    builder.create().show();
                     break;
                 case(R.id.sectionBtn):
+                    Intent section_jumpIntent=new Intent(getActivity(), SectionActivity.class);
+                    startActivity(section_jumpIntent);
                     break;
                 case(R.id.exitloginBtn):
                     Intent exit_jumpIntent=new Intent(getActivity(), LoginActivity.class);

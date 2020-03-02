@@ -3,8 +3,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     tools:context=".FragmentMy.ThemeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#3c3c3c">
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="30dp"/>
+        <TextView
+            android:id="@+id/exitThemeTV"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@mipmap/icon_exit"
+            />
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="30dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="主题选择"
+            android:textSize="20dp"
+            android:textColor="#f4f4f4"
+            />
+    </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -15,36 +44,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center_horizontal">
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:background="#3c3c3c">
-
-                <TextView
-                    android:layout_width="20dp"
-                    android:layout_height="30dp"/>
-                <TextView
-                    android:id="@+id/exitThemeTV"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:background="@mipmap/icon_exit"
-                    />
-                <TextView
-                    android:layout_width="20dp"
-                    android:layout_height="30dp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="主题选择"
-                    android:textSize="20dp"
-                    android:textColor="#f4f4f4"
-                    />
-            </LinearLayout>
 
             <View
                 android:layout_width="match_parent"

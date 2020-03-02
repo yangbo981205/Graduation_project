@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,8 +12,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FragmentMy.SectionActivity"></activity>
+        <activity android:name=".FragmentOutdoor.OutdoorActivity"></activity>
+        <activity android:name=".FragmentMy.SectionActivity" />
         <activity android:name=".FragmentMy.InformActivity" />
         <activity android:name=".FragmentMy.VoiceActivity" />
         <activity android:name=".FragmentMy.ThemeActivity" />

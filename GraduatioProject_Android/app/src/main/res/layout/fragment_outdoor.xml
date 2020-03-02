@@ -41,7 +41,7 @@
         <WebView
             android:id="@+id/TemperatureWW"
             android:layout_width="match_parent"
-            android:layout_height="310dp">
+            android:layout_height="260dp">
         </WebView>
         <ScrollView
             android:layout_width="match_parent"
@@ -63,7 +63,7 @@
             android:layout_height="50dp"
             android:background="@drawable/style_button_outdoor"
             android:text="进入户外模式"
-            android:textSize="18dp" />
+            android:textSize="20dp" />
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"

@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center|top"
     tools:context=".tools.FragmentManager">
 
     <View
@@ -33,11 +34,202 @@
     </LinearLayout>
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="control"
-        android:textSize="100dp"
-        >
+        android:layout_width="365dp"
+        android:layout_height="50dp"
+        android:gravity="center|left"
+        android:text="● 控制与状态"
+        android:textSize="20dp"
+        android:textStyle="bold">
     </TextView>
+
+    <View
+        android:layout_width="365dp"
+        android:layout_height="2dp"
+        android:background="#e4e4e4">
+    </View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="180dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/lightControl"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/control_light">
+            </TextView>
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="35dp"
+                android:text="灯光开关"
+                android:textSize="16dp"
+                android:gravity="center">
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="180dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/doorControl"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:background="@drawable/control_door">
+            </TextView>
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="35dp"
+                android:text="门开关"
+                android:textSize="16dp"
+                android:gravity="center">
+            </TextView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="180dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/windControl"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/control_wind">
+            </TextView>
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="35dp"
+                android:text="风扇开关"
+                android:textSize="16dp"
+                android:gravity="center">
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="180dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/alarmControl"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/control_alarm">
+            </TextView>
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="35dp"
+                android:text="警报开关"
+                android:textSize="16dp"
+                android:gravity="center">
+            </TextView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="365dp"
+        android:layout_height="5dp"
+        android:background="@drawable/bg_cut2">
+    </View>
+
+    <TextView
+        android:layout_width="365dp"
+        android:layout_height="50dp"
+        android:gravity="center|left"
+        android:text="● 语音与监控"
+        android:textSize="20dp"
+        android:textStyle="bold">
+    </TextView>
+
+    <View
+        android:layout_width="365dp"
+        android:layout_height="2dp"
+        android:background="#e4e4e4">
+    </View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="160dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center|right">
+
+            <TextView
+                android:id="@+id/voiceControl"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@mipmap/icon_voice">
+            </TextView>
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:text="语音控制"
+                android:textSize="16dp"
+                android:gravity="center">
+            </TextView>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="80dp"
+            android:layout_height="match_parent">
+        </View>
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="160dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center|left">
+
+            <TextView
+                android:id="@+id/monitorControl"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@mipmap/icon_monitor_true">
+            </TextView>
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:text="监控设置"
+                android:textSize="16dp"
+                android:gravity="center">
+            </TextView>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </LinearLayout>

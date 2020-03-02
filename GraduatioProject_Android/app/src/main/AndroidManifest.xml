@@ -12,9 +12,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".FragmentOutdoor.OutdoorActivity"></activity>
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".FragmentControl.MonitorControlActivity"></activity>
+        <activity android:name=".FragmentControl.VoiceControlActivity" />
+        <activity android:name=".FragmentOutdoor.OutdoorActivity" />
         <activity android:name=".FragmentMy.SectionActivity" />
         <activity android:name=".FragmentMy.InformActivity" />
         <activity android:name=".FragmentMy.VoiceActivity" />

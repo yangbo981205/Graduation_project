@@ -31,7 +31,7 @@
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:orientation="horizontal"
-        android:background="@mipmap/bg_my"
+        android:background="@drawable/bg_my"
         >
 
         <LinearLayout

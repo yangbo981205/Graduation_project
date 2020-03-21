@@ -1,0 +1,23 @@
+create database graditional_project;
+
+use graditional_project;
+
+CREATE TABLE `Admin` (
+`id`  int(4) NOT NULL AUTO_INCREMENT ,
+`Admin_number`  varchar(20) NOT NULL ,
+`Admin_password`  varchar(20) NOT NULL ,
+`Admin_email`  varchar(20) NOT NULL ,
+PRIMARY KEY (`id`, `Admin_number`)
+)
+;
+
+CREATE TABLE `User` (
+`id`  int(4) NOT NULL AUTO_INCREMENT ,
+`Username`  varchar(20) NOT NULL ,
+`Password`  varchar(20) NOT NULL ,
+`phone`  varchar(20) NOT NULL ,
+`Email`  varchar(30) NOT NULL ,
+PRIMARY KEY (`id`, `Username`)
+)
+;
+

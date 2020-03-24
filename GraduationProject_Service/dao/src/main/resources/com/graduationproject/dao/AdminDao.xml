@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.4//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.graduationproject.dao.AdminDao">
+
+    <resultMap id="admin" type="Admin">
+        <id property="admin_number" column="admin_number" javaType="String"/>
+        <result property="admin_password" column="admin_password" javaType="String"/>
+        <result property="admin_name" column="admin_name" javaType="String"/>
+        <result property="admin_sex" column="admin_sex" javaType="String"/>
+        <result property="admin_email" column="admin_email" javaType="String"/>
+        <result property="admin_root" column="admin_root" javaType="String"/>
+    </resultMap>
+
+
+    <insert id="insert" parameterType="Admin">
+        insert into Admin values(null,#{admin_number},#{admin_password},#{admin_name},#{admin_sex},#{admin_email},#{admin_root})
+    </insert>
+
+    <update id="update" parameterType="Admin">
+        update Admin set admin_password=#{admin_password},admin_name=#{admin_name},admin_sex=#{admin_sex},admin_email=#{admin_email},admin_root=#{admin_root}} where admin_number=#{admin_number}
+    </update>
+
+    <delete id="delete" parameterType="String">
+        delete from Admin where admin_number=#{admin_number}
+    </delete>
+
+    <select id="select" parameterType="String" resultMap="admin">
+        select * from Admin where admin_number=#{admin_number}
+    </select>
+
+    <select id="selectAll" resultMap="admin">
+        select * from Admin
+    </select>
+
+</mapper>

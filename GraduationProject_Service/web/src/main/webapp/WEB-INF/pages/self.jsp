@@ -11,9 +11,9 @@
 
     <title> 便携式安防系统 </title>
 
-    <link rel="stylesheet" type="text/css" href="../assets/skin/default_skin/css/theme.css">
-    <link rel="stylesheet" type="text/css" href="../assets/admin-tools/admin-forms/css/admin-forms.css">
-    <link rel="shortcut icon" href="../assets/img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="assets/skin/default_skin/css/theme.css">
+    <link rel="stylesheet" type="text/css" href="assets/admin-tools/admin-forms/css/admin-forms.css">
+    <link rel="shortcut icon" href="assets/img/favicon.ico">
 </head>
 
 <body class="admin-validation-page" data-spy="scroll" data-target="#nav-spy" data-offset="200">
@@ -145,72 +145,34 @@
     <section id="content_wrapper">
 
 
-
 <section id="content" class="table-layout animated fadeIn">
     <div class="tray tray-center">
         <div class="content-header">
-            <h2> 修改用户信息 </h2>
+            <h2> 个人信息 </h2>
             <p class="lead"></p>
         </div>
         <div class="admin-form theme-primary mw1000 center-block" style="padding-bottom: 175px;">
             <div class="panel heading-border">
-                <form:form action="/graduationproject/users/update" modelAttribute="users"  id="admin-form" name="addForm">
-                    <div class="panel-body bg-light">
-                        <div class="section-divider mt20 mb40">
-                            <span> 修改用户信息 </span>
-                        </div>
-                        <div class="section row">
-                            <div class="col-md-6">
-                                <label for="username" class="field prepend-icon">
-                                    <form:input path="username" cssClass="gui-input" placeholder="username" readonly="true"/>
-                                    <label for="username" class="field-icon">
-                                        <i class="fa fa-user"></i>
-                                    </label>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="section row">
-                            <div class="col-md-6">
-                                <label for="password" class="field prepend-icon">
-                                    <form:input path="password" cssClass="gui-input" placeholder="password" />
-                                    <label for="password" class="field-icon">
-                                        <i class="fa fa-user"></i>
-                                    </label>
-                                </label>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="phone" class="field prepend-icon">
-                                    <form:input path="phone" cssClass="gui-input" placeholder="phone" />
-                                    <label for="phone" class="field-icon">
-                                        <i class="fa fa-user"></i>
-                                    </label>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="section row">
-                            <div class="col-md-6">
-                                <label for="email" class="field prepend-icon">
-                                    <form:input path="email" cssClass="gui-input" placeholder="email" />
-                                    <label for="email" class="field-icon">
-                                        <i class="fa fa-user"></i>
-                                    </label>
-                                </label>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="nickname" class="field prepend-icon">
-                                    <form:input path="nickname" cssClass="gui-input" placeholder="nickname" />
-                                    <label for="nickname" class="field-icon">
-                                        <i class="fa fa-user"></i>
-                                    </label>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="panel-footer text-right">
-                            <button type="submit" class="button"> 保存 </button>
-                            <button type="button" class="button" onclick="javascript:window.history.go(-1);"> 返回 </button>
-                        </div>
+                <div class="panel-body bg-light">
+                    <div class="section-divider mt20 mb40">
+                        <span> 基本信息 </span>
                     </div>
-                </form:form>
+                    <div class="section row">
+                        <div class="col-md-2">账号</div>
+                        <div class="col-md-4">${sessionScope.users.username}</div>
+                        <div class="col-md-2">姓名</div>
+                        <div class="col-md-4">${sessionScope.users.phone}</div>
+                    </div>
+                    <div class="section row">
+                        <div class="col-md-2">所属部门</div>
+                        <div class="col-md-4">${sessionScope.users.email}</div>
+                        <div class="col-md-2">职务</div>
+                        <div class="col-md-4">${sessionScope.users.nickname}</div>
+                    </div>
+                    <div class="panel-footer text-right">
+                        <button type="button" class="button" onclick="javascript:window.history.go(-1);"> 返回 </button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -251,15 +213,15 @@
         -webkit-appearance: none; /*Optionally disable dropdown arrow*/
     }
 </style>
-<script src="../vendor/jquery/jquery-1.11.1.min.js"></script>
-<script src="../vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
-<script src="../assets/admin-tools/admin-forms/js/jquery.validate.min.js"></script>
-<script src="../assets/admin-tools/admin-forms/js/additional-methods.min.js"></script>
-<script src="../assets/admin-tools/admin-forms/js/jquery-ui-datepicker.min.js"></script>
-<script src="../assets/js/utility/utility.js"></script>
-<script src="../assets/js/demo/demo.js"></script>
-<script src="../assets/js/main.js"></script>
-<script type="text/javascript" src="../js/pages.js"></script>
-<script type="text/javascript" src="../js/items.js"></script>
+<script src="vendor/jquery/jquery-1.11.1.min.js"></script>
+<script src="vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
+<script src="assets/admin-tools/admin-forms/js/jquery.validate.min.js"></script>
+<script src="assets/admin-tools/admin-forms/js/additional-methods.min.js"></script>
+<script src="assets/admin-tools/admin-forms/js/jquery-ui-datepicker.min.js"></script>
+<script src="assets/js/utility/utility.js"></script>
+<script src="assets/js/demo/demo.js"></script>
+<script src="assets/js/main.js"></script>
+<script type="text/javascript" src="js/pages.js"></script>
+<script type="text/javascript" src="js/items.js"></script>
 </body>
 </html>

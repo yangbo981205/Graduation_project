@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.4//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.graduationproject.dao.NodeDao">
+
+    <resultMap id="node" type="Node">
+        <id property="macaddr" column="macaddr" javaType="String"/>
+        <result property="name" column="name" javaType="String"/>
+        <result property="paraddr" column="paraddr" javaType="String"/>
+        <result property="nwkaddr" column="nwkaddr" javaType="String"/>
+    </resultMap>
+
+
+    <insert id="insert" parameterType="Node">
+        insert into node_information values(#{macaddr},#{name},#{paraddr},#{nwkaddr})
+    </insert>
+
+    <update id="update" parameterType="Node">
+        update node_information set name=#{name},paraddr=#{paraddr},nwkaddr=#{nwkaddr} where macaddr=#{macaddr}
+    </update>
+
+    <delete id="delete" parameterType="String">
+        delete from node_information where macaddr=#{macaddr}
+    </delete>
+
+    <select id="select" parameterType="String" resultMap="node">
+        select * from node_information where macaddr=#{macaddr}
+    </select>
+
+    <select id="selectAll" resultMap="node">
+        select * from node_information
+    </select>
+
+</mapper>

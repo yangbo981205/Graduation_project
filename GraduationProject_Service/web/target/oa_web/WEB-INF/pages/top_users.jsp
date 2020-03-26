@@ -78,12 +78,11 @@
             </header>
             <ul class="nav sidebar-menu">
                 <li class="sidebar-label pt20">个人设置</li>
-                <li>
+                <li class="active">
                     <a href="/claim_voucher/deal">
                         <span class="glyphicon glyphicon-book"></span>
                         <span class="sidebar-title">舒适环境区间</span>
                         <span class="sidebar-title-tray">
-                            <%--                <span class="label label-xs bg-primary">New</span>--%>
                         </span>
                     </a>
                 </li>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.4//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.graduationproject.dao.ComfortableDao">
+
+    <resultMap id="comfortable" type="Comfortable">
+        <id property="username" column="username" javaType="String"/>
+        <result property="max_temperature" column="max_temperature" javaType="String"/>
+        <result property="min_temperature" column="min_temperature" javaType="String"/>
+        <result property="max_humidity" column="max_humidity" javaType="String"/>
+        <result property="min_humidity" column="min_humidity" javaType="String"/>
+        <result property="smokescope" column="smokescope" javaType="String"/>
+    </resultMap>
+
+
+    <insert id="insert" parameterType="Comfortable">
+        insert into comfortable_environment values(#{username},#{max_temperature},#{min_temperature},#{max_humidity},#{min_humidity},#{smokescope})
+    </insert>
+
+    <update id="update" parameterType="Comfortable">
+        update comfortable_environment set max_temperature=#{max_temperature},min_temperature=#{min_temperature},max_humidity=#{max_humidity},min_humidity=#{min_humidity},smokescope=#{smokescope} where username=#{username}
+    </update>
+
+    <delete id="delete" parameterType="String">
+        delete from comfortable_environment where username=#{username}
+    </delete>
+
+    <select id="select" parameterType="String" resultMap="comfortable">
+        select * from comfortable_environment where username=#{username}
+    </select>
+
+    <select id="selectAll" resultMap="comfortable">
+        select * from comfortable_environment
+    </select>
+
+</mapper>

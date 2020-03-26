@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.4//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.graduationproject.dao.InformationDao">
+
+    <resultMap id="information" type="Information">
+        <result property="time" column="time" javaType="String"/>
+        <result property="admin_number" column="admin_number" javaType="String"/>
+        <result property="information" column="information" javaType="String"/>
+    </resultMap>
+
+
+    <insert id="insert" parameterType="Information">
+        insert into information values({time},#{admin_number},#{information})
+    </insert>
+
+    <update id="update" parameterType="Information">
+        update information set time=#{time},information=#{information} where admin_number=#{admin_number}
+    </update>
+
+    <delete id="delete" parameterType="String">
+        delete from information where admin_number=#{admin_number}
+    </delete>
+
+    <select id="select" parameterType="String" resultMap="information">
+        select * from information where admin_number=#{admin_number}
+    </select>
+
+    <select id="selectAll" resultMap="information">
+        select * from information
+    </select>
+
+</mapper>

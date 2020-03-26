@@ -22,26 +22,26 @@
         <section id="content">
             <div class="admin-form theme-info mw500" id="login">
                 <div class="content-header">
-                    <h1> 普通用户</h1>
+                    <h1>管理员用户</h1>
                     <p class="lead">欢迎登陆便携式安防管理系统</p>
                 </div>
                 <div class="panel mt30 mb25">
-                    <form method="post" action="users_login" id="contact">
+                    <form method="post" action="admin_login" id="contact">
                         <div class="panel-body bg-light p25 pb15">
                             <div class="section">
-                                <label for="username" class="field-label text-muted fs18 mb10">账号</label>
-                                <label for="username" class="field prepend-icon">
-                                    <input type="text" name="username" id="username" class="gui-input" placeholder="请输入账号">
-                                    <label for="username" class="field-icon">
+                                <label for="admin_number" class="field-label text-muted fs18 mb10">账号</label>
+                                <label for="admin_number" class="field prepend-icon">
+                                    <input type="text" name="admin_number" id="admin_number" class="gui-input" placeholder="请输入账号">
+                                    <label for="admin_number" class="field-icon">
                                         <i class="fa fa-user"></i>
                                     </label>
                                 </label>
                             </div>
                             <div class="section">
-                                <label for="password" class="field-label text-muted fs18 mb10">密码</label>
-                                <label for="password" class="field prepend-icon">
-                                    <input type="password" name="password" id="password" class="gui-input" placeholder="请输入密码">
-                                    <label for="password" class="field-icon">
+                                <label for="admin_password" class="field-label text-muted fs18 mb10">密码</label>
+                                <label for="admin_password" class="field prepend-icon">
+                                    <input type="password" name="admin_password" id="admin_password" class="gui-input" placeholder="请输入密码">
+                                    <label for="admin_password" class="field-icon">
                                         <i class="fa fa-lock"></i>
                                     </label>
                                 </label>
@@ -49,7 +49,7 @@
                         </div>
                         <div class="panel-footer clearfix">
                             <button type="submit" class="button btn-primary mr10 pull-right">登录</button>
-                            <button type="button" class="button mr10 pull-right" onclick="window.location.href='/graduationproject/login/admin_to_login'">切换用户</button>
+                            <button type="button" class="button mr10 pull-right" onclick="window.location.href='/graduationproject/login/to_login'">切换用户</button>
                             <label class="switch ib switch-primary mt10">
                                 <input type="checkbox" name="remember" id="remember" checked="false">
                                 <label for="remember" data-on="是" data-off="否"></label>

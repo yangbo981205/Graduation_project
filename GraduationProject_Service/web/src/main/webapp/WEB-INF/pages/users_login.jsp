@@ -12,9 +12,9 @@
     <meta name="description" content="AbsoluteAdmin - A Responsive HTML5 Admin UI Framework">
     <meta name="author" content="AbsoluteAdmin">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="assets/skin/default_skin/css/theme.css">
-    <link rel="stylesheet" type="text/css" href="assets/admin-tools/admin-forms/css/admin-forms.css">
-    <link rel="shortcut icon" href="assets/img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../assets/skin/default_skin/css/theme.css">
+    <link rel="stylesheet" type="text/css" href="../assets/admin-tools/admin-forms/css/admin-forms.css">
+    <link rel="shortcut icon" href="../assets/img/favicon.ico">
 </head>
 <body class="external-page external-alt sb-l-c sb-r-c">
 <div id="main" class="animated fadeIn">
@@ -22,7 +22,7 @@
         <section id="content">
             <div class="admin-form theme-info mw500" id="login">
                 <div class="content-header">
-                    <h1> 毕业设计</h1>
+                    <h1> 普通用户</h1>
                     <p class="lead">欢迎登陆便携式安防管理系统</p>
                 </div>
                 <div class="panel mt30 mb25">
@@ -48,9 +48,10 @@
                             </div>
                         </div>
                         <div class="panel-footer clearfix">
-                            <button type="submit" class="button btn-primary mr10 pull-right">登陆</button>
+                            <button type="submit" class="button btn-primary mr10 pull-right">登录</button>
+                            <button type="button" class="button mr10 pull-right" onclick="window.location.href='/graduationproject/login/admin_to_login'">切换用户</button>
                             <label class="switch ib switch-primary mt10">
-                                <input type="checkbox" name="remember" id="remember" checked="true">
+                                <input type="checkbox" name="remember" id="remember" checked="false">
                                 <label for="remember" data-on="是" data-off="否"></label>
                                 <span>记住密码</span>
                             </label>
@@ -61,10 +62,10 @@
         </section>
     </section>
 </div>
-<script src="vendor/jquery/jquery-1.11.1.min.js"></script>
-<script src="vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
-<script src="assets/js/utility/utility.js"></script>
-<script src="assets/js/demo/demo.js"></script>
-<script src="assets/js/main.js"></script>
+<script src="../vendor/jquery/jquery-1.11.1.min.js"></script>
+<script src="../vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
+<script src="../assets/js/utility/utility.js"></script>
+<script src="../assets/js/demo/demo.js"></script>
+<script src="../assets/js/main.js"></script>
 </body>
 </html>

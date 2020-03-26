@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpSession;
 import java.util.Map;
 
 @Controller("adminController")
@@ -17,8 +18,9 @@ public class AdminController {
     private AdminBiz adminBiz;
 
     @RequestMapping("/list")
-    public String list(Map<String,Object> map){
-        map.put("list",adminBiz.getAll());
+    public String list(HttpSession httpSession,Map<String,Object> map){
+        Admin admin = (Admin) httpSession.getAttribute("admin");
+        map.put("list",adminBiz.getRoot(admin.getAdmin_root()));
         return "admin_list";
     }
 

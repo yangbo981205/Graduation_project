@@ -20,7 +20,7 @@ public class LoginInterceptor implements HandlerInterceptor {
             return true;
         }
 
-        httpServletResponse.sendRedirect("to_login");
+        httpServletResponse.sendRedirect("../to_login");
         return false;
     }
 

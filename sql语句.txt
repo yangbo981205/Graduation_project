@@ -2,22 +2,82 @@ create database graditional_project;
 
 use graditional_project;
 
-CREATE TABLE `Admin` (
+CREATE TABLE `admin` (
 `id`  int(4) NOT NULL AUTO_INCREMENT ,
-`Admin_number`  varchar(20) NOT NULL ,
-`Admin_password`  varchar(20) NOT NULL ,
-`Admin_email`  varchar(20) NOT NULL ,
-PRIMARY KEY (`id`, `Admin_number`)
-)
+`admin_number`  varchar(20) NOT NULL ,
+`admin_password`  varchar(20) NOT NULL ,
+`admin_email`  varchar(20) NOT NULL ,
+`admin_root`  varchar(20) NOT NULL ,
+PRIMARY KEY (`id`, `admin_number`)
+)AUTO_INCREMENT=1000
 ;
 
-CREATE TABLE `User` (
+CREATE TABLE `user` (
 `id`  int(4) NOT NULL AUTO_INCREMENT ,
-`Username`  varchar(20) NOT NULL ,
-`Password`  varchar(20) NOT NULL ,
+`username`  varchar(20) NOT NULL ,
+`password`  varchar(20) NOT NULL ,
 `phone`  varchar(20) NOT NULL ,
-`Email`  varchar(30) NOT NULL ,
-PRIMARY KEY (`id`, `Username`)
+`email`  varchar(30) NOT NULL ,
+PRIMARY KEY (`id`, `username`)
+)AUTO_INCREMENT=1000
+;
+
+CREATE TABLE `comfortable_environment` (
+`username`  varchar(255) NOT NULL ,
+`max_temperature`  varchar(255) NULL ,
+`min_temperature`  varchar(255) NULL ,
+`max-humidity`  varchar(255) NULL ,
+`min_humidity`  varchar(255) NULL ,
+`smokescope`  varchar(255) default=80 NULL ,
+PRIMARY KEY (`username`),
+CONSTRAINT `username` FOREIGN KEY (`username`) REFERENCES `users` (`username`) ON DELETE CASCADE ON UPDATE CASCADE
 )
 ;
 
+CREATE TABLE `node_information` (
+`macaddr`  varchar(255) NOT NULL ,
+`name`  varchar(255) NOT NULL ,
+`paraddr`  varchar(255) NOT NULL ,
+`nwkaddr`  varchar(255) NOT NULL ,
+PRIMARY KEY (`macaddr`)
+)
+;
+
+CREATE TABLE `environment` (
+`time`  varchar(255) NOT NULL ,
+`temperature`  varchar(255) NULL ,
+`humidity`  varchar(255) NULL ,
+`smokescope`  varchar(255) NULL ,
+PRIMARY KEY (`time`)
+)
+;
+
+CREATE TABLE `user_set` (
+`username`  varchar(255) NOT NULL ,
+`theme`  varchar(255) NOT NULL DEFAULT theme1 ,
+`voice`  varchar(255) NOT NULL DEFAULT voice1 ,
+PRIMARY KEY (`username`),
+CONSTRAINT `username` FOREIGN KEY (`username`) REFERENCES `users` (`username`) ON DELETE CASCADE ON UPDATE CASCADE
+)
+;
+
+
+ALTER TABLE `graduation_project`.`admin` ADD INDEX (`admin_number`);
+
+CREATE TABLE `NewTable` (
+`time`  varchar(255) NOT NULL ,
+`admin_number`  varchar(255) NOT NULL ,
+`information`  varchar(255) NOT NULL ,
+PRIMARY KEY (`admin_number`),
+CONSTRAINT `admin_number` FOREIGN KEY (`admin_number`) REFERENCES `admin` (`admin_number`) ON DELETE NO ACTION ON UPDATE CASCADE
+)
+;
+
+CREATE TABLE `opinion` (
+`time`  varchar(255) NOT NULL ,
+`username`  varchar(255) NOT NULL ,
+`opinion`  varchar(255) NOT NULL ,
+PRIMARY KEY (`username`),
+CONSTRAINT `username2` FOREIGN KEY (`username`) REFERENCES `users` (`username`) ON DELETE NO ACTION ON UPDATE CASCADE
+)
+;

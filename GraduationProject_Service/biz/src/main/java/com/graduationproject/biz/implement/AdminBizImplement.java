@@ -37,6 +37,11 @@ public class AdminBizImplement implements AdminBiz {
     }
 
     @Override
+    public List<Admin> getRoot(String admin_root) {
+        return adminDao.selectRoot(admin_root);
+    }
+
+    @Override
     public List<Admin> getAll() {
         return adminDao.selectAll();
     }

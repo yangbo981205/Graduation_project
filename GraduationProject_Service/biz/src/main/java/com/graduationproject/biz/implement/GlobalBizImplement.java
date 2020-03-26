@@ -1,7 +1,9 @@
 package com.graduationproject.biz.implement;
 
 import com.graduationproject.biz.GlobalBiz;
+import com.graduationproject.dao.AdminDao;
 import com.graduationproject.dao.UsersDao;
+import com.graduationproject.entity.Admin;
 import com.graduationproject.entity.Users;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -13,6 +15,10 @@ public class GlobalBizImplement implements GlobalBiz {
     @Qualifier("usersDao")
     @Autowired
     private UsersDao usersDao;
+    @Qualifier("adminDao")
+    @Autowired
+    private AdminDao adminDao;
+
 
     @Override
     public Users users_login(String username, String password) {
@@ -26,5 +32,19 @@ public class GlobalBizImplement implements GlobalBiz {
     @Override
     public void users_changPassword(Users users) {
         usersDao.update(users);
+    }
+
+    @Override
+    public Admin admin_login(String admin_number, String admin_password) {
+        Admin admin=adminDao.select(admin_number);
+        if(admin!=null&&admin.getAdmin_password().equals(admin_password)){
+            return admin;
+        }
+        return null;
+    }
+
+    @Override
+    public void admin_changPassword(Admin admin) {
+        adminDao.update(admin);
     }
 }

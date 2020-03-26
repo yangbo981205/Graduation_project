@@ -17,7 +17,7 @@
     </insert>
 
     <update id="update" parameterType="Admin">
-        update Admin set admin_password=#{admin_password},admin_name=#{admin_name},admin_sex=#{admin_sex},admin_email=#{admin_email},admin_root=#{admin_root}} where admin_number=#{admin_number}
+        update Admin set admin_password=#{admin_password},admin_name=#{admin_name},admin_sex=#{admin_sex},admin_email=#{admin_email},admin_root=#{admin_root} where admin_number=#{admin_number}
     </update>
 
     <delete id="delete" parameterType="String">
@@ -26,6 +26,10 @@
 
     <select id="select" parameterType="String" resultMap="admin">
         select * from Admin where admin_number=#{admin_number}
+    </select>
+
+    <select id="selectRoot" parameterType="String" resultMap="admin">
+        select * from Admin where admin_root&lt;#{admin_root}
     </select>
 
     <select id="selectAll" resultMap="admin">

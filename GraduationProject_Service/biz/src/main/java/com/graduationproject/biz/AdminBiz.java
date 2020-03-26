@@ -10,6 +10,7 @@ public interface AdminBiz {
     void edit(Admin admin);
     void remove(String admin_number);
     Admin get(String admin_number);
+    List<Admin> getRoot(String admin_root);
     List<Admin> getAll();
 
 }

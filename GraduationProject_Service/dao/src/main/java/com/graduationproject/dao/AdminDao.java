@@ -11,5 +11,6 @@ public interface AdminDao {
     void update(Admin admin);
     void delete(String admin_number);
     Admin select(String admin_number);
+    List<Admin> selectRoot(String admin_root);
     List<Admin> selectAll();
 }

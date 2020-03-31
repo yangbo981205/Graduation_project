@@ -79,34 +79,37 @@
             <ul class="nav sidebar-menu">
                 <li class="sidebar-label pt20">数据库基本信息管理</li>
                 <li>
-                    <a href="/">
+                    <a href="/graduationproject/node/list">
                         <span class="glyphicon glyphicon-book"></span>
                         <span class="sidebar-title">传感器节点信息</span>
-                        <span class="sidebar-title-tray">
-                            <%--                <span class="label label-xs bg-primary">New</span>--%>
-                        </span>
                     </a>
                 </li>
                 <li >
-                    <a href="/claim_voucher/self">
+                    <a href="/graduationproject/environment/list_admin">
                         <span class="glyphicon glyphicon-book"></span>
                         <span class="sidebar-title">传感器采集信息</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/claim_voucher/to_add">
+                    <a href="/graduationproject/information/list_admin">
                         <span class="glyphicon glyphicon-book"></span>
                         <span class="sidebar-title">通知信息</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/claim_voucher/to_add">
+                    <a href="/graduationproject/opinion/list_admin">
+                        <span class="glyphicon glyphicon-book"></span>
+                        <span class="sidebar-title">用户反馈</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/graduationproject/userSet/list">
                         <span class="glyphicon glyphicon-book"></span>
                         <span class="sidebar-title">用户基本设置</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/claim_voucher/to_add">
+                    <a href="/graduationproject/comfortable/list">
                         <span class="glyphicon glyphicon-book"></span>
                         <span class="sidebar-title">用户环境设置</span>
                     </a>

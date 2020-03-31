@@ -10,15 +10,15 @@
 
 
     <insert id="insert" parameterType="Information">
-        insert into information values({time},#{admin_number},#{information})
+        insert into information values(#{time},#{admin_number},#{information})
     </insert>
 
     <update id="update" parameterType="Information">
-        update information set time=#{time},information=#{information} where admin_number=#{admin_number}
+        update information set time=#{time},information=#{information} where time=#{time}
     </update>
 
     <delete id="delete" parameterType="String">
-        delete from information where admin_number=#{admin_number}
+        delete from information where time=#{time}
     </delete>
 
     <select id="select" parameterType="String" resultMap="information">

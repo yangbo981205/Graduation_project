@@ -79,7 +79,7 @@
             <ul class="nav sidebar-menu">
                 <li class="sidebar-label pt20">个人设置</li>
                 <li class="active">
-                    <a href="/claim_voucher/deal">
+                    <a href="/graduationproject/comfortable/self">
                         <span class="glyphicon glyphicon-book"></span>
                         <span class="sidebar-title">舒适环境区间</span>
                         <span class="sidebar-title-tray">
@@ -87,27 +87,33 @@
                     </a>
                 </li>
                 <li class="active">
-                    <a href="/claim_voucher/self">
+                    <a href="/graduationproject/userSet/self">
                         <span class="glyphicon glyphicon-book"></span>
                         <span class="sidebar-title">移动端设置</span>
                     </a>
                 </li>
-                <li class="sidebar-label pt15">操作记录</li>
+                <li class="sidebar-label pt15">记录</li>
+                <li class="active">
+                    <a href="/graduationproject/environment/list_users">
+                        <span class="glyphicon glyphicon-book"></span>
+                        <span class="sidebar-title">环境记录</span>
+                    </a>
+                </li>
                 <li class="active">
                     <a href="/claim_voucher/self">
                         <span class="glyphicon glyphicon-book"></span>
-                        <span class="sidebar-title">日志查询</span>
+                        <span class="sidebar-title">操作日志查询</span>
                     </a>
                 </li>
                 <li class="sidebar-label pt15">管理互动</li>
                 <li class="active">
-                    <a href="/claim_voucher/self">
+                    <a href="/graduationproject/information/list_users">
                         <span class="glyphicon glyphicon-book"></span>
                         <span class="sidebar-title">通知信息</span>
                     </a>
                 </li>
                 <li class="active">
-                    <a href="/claim_voucher/self">
+                    <a href="/graduationproject/opinion/list_users">
                         <span class="glyphicon glyphicon-book"></span>
                         <span class="sidebar-title">意见反馈</span>
                     </a>

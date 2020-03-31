@@ -10,15 +10,15 @@
 
 
     <insert id="insert" parameterType="Opinion">
-        insert into opinion values(#{username},#{time},#{opinion})
+        insert into opinion values(#{time},#{username},#{opinion})
     </insert>
 
     <update id="update" parameterType="Opinion">
-        update opinion set time=#{time},opinion=#{opinion} where username=#{username}
+        update opinion set time=#{time},opinion=#{opinion} where time=#{time}
     </update>
 
     <delete id="delete" parameterType="String">
-        delete from opinion where username=#{username}
+        delete from opinion where time=#{time}
     </delete>
 
     <select id="select" parameterType="String" resultMap="opinion">

@@ -19,7 +19,7 @@
                         <div class="section row">
                             <div class="col-md-6">
                                 <label for="admin_number" class="field prepend-icon">
-                                    <form:input path="admin_number" cssClass="gui-input" placeholder="number" readonly="true"/>
+                                    <form:input path="admin_number" cssClass="gui-input" placeholder="用户名" readonly="true"/>
                                     <label for="admin_number" class="field-icon">
                                         <i class="fa fa-user"></i>
                                     </label>

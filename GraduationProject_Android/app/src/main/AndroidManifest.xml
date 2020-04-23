@@ -14,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".FragmentControl.MonitorControlActivity"></activity>
+        <activity android:name=".FragmentControl.MonitorFull" />
+        <activity android:name=".FragmentControl.MonitorControlActivity" />
         <activity android:name=".FragmentControl.VoiceControlActivity" />
         <activity android:name=".FragmentOutdoor.OutdoorActivity" />
         <activity android:name=".FragmentMy.SectionActivity" />

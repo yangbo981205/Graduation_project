@@ -1,63 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".FragmentControl.MonitorControlActivity">
+    tools:context=".FragmentControl.MonitorFull">
 
     <LinearLayout
-        android:id="@+id/exitLayoutMonitor"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:background="#3c3c3c">
-
-        <TextView
-            android:layout_width="20dp"
-            android:layout_height="30dp"/>
-        <TextView
-            android:id="@+id/exitMonitor"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:background="@mipmap/icon_exit"
-            />
-        <TextView
-            android:layout_width="20dp"
-            android:layout_height="30dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="监控视频"
-            android:textSize="20dp"
-            android:textColor="#f4f4f4"
-            />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/layoutMonitor"
-        android:layout_width="match_parent"
-        android:layout_height="350dp"
+        android:layout_height="match_parent"
         android:orientation="vertical">
         <VideoView
-            android:id="@+id/MonitorVideo"
-            android:layout_width="match_parent"
-            android:layout_height="320dp">
+            android:id="@+id/videoMonitorFull"
+            android:layout_width="800dp"
+            android:layout_height="1dp"
+            android:layout_weight="10">
         </VideoView>
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:gravity="center"
             android:orientation="horizontal"
             android:background="#000000">
 
             <View
-                android:layout_width="20dp"
+                android:layout_width="30dp"
                 android:layout_height="30dp"/>
             <TextView
-                android:id="@+id/monitorTime"
+                android:id="@+id/monitorTimeFull"
                 android:layout_width="200dp"
                 android:layout_height="30dp"
                 android:gravity="left|center"
@@ -65,11 +37,11 @@
                 android:textColor="#ffffff">
             </TextView>
             <View
-                android:layout_width="100dp"
+                android:layout_width="420dp"
                 android:layout_height="30dp"/>
 
             <TextView
-                android:id="@+id/monitorPlay"
+                android:id="@+id/monitorPlayFull"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:background="@drawable/control_video">
@@ -79,7 +51,7 @@
                 android:layout_height="30dp"/>
 
             <TextView
-                android:id="@+id/setMonitorFull"
+                android:id="@+id/monitorSmall"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:background="@mipmap/icon_full">

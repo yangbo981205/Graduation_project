@@ -23,6 +23,35 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="昵        称："
+                android:textSize="20dp"
+                android:gravity="center"
+                />
+
+            <EditText
+                android:id="@+id/register_nicknameET"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:background="@drawable/style_input"
+                android:hint="可为空"
+                android:textSize="16dp"
+                android:singleLine="true"
+                android:textCursorDrawable="@drawable/style_cursor"
+                />
+
+        </TableRow>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            />
+
+        <TableRow
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:text="用  户  名："
                 android:textSize="20dp"
                 android:gravity="center"

@@ -64,7 +64,7 @@
                     android:layout_width="1dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/theme_select0">
+                    android:background="@drawable/theme1">
                 </TextView>
                 <View
                     android:layout_width="6dp"
@@ -75,7 +75,7 @@
                     android:layout_width="1dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/theme_select1">
+                    android:background="@drawable/theme2">
                 </TextView>
                 <View
                     android:layout_width="6dp"
@@ -86,7 +86,7 @@
                     android:layout_width="1dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/theme_select2">
+                    android:background="@drawable/theme3">
                 </TextView>
                 <View
                     android:layout_width="10dp"
@@ -113,7 +113,7 @@
                     android:layout_width="1dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/theme_select3">
+                    android:background="@drawable/theme4">
                 </TextView>
                 <View
                     android:layout_width="6dp"
@@ -124,7 +124,7 @@
                     android:layout_width="1dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/theme_select4">
+                    android:background="@drawable/theme5">
                 </TextView>
                 <View
                     android:layout_width="6dp"
@@ -135,7 +135,7 @@
                     android:layout_width="1dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/theme_select5">
+                    android:background="@drawable/theme6">
                 </TextView>
                 <View
                     android:layout_width="10dp"
@@ -162,7 +162,7 @@
                     android:layout_width="1dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/theme_select6">
+                    android:background="@drawable/theme7">
                 </TextView>
                 <View
                     android:layout_width="6dp"
@@ -173,7 +173,7 @@
                     android:layout_width="1dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/theme_select7">
+                    android:background="@drawable/theme8">
                 </TextView>
                 <View
                     android:layout_width="6dp"
@@ -184,7 +184,7 @@
                     android:layout_width="1dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/theme_select8">
+                    android:background="@drawable/theme9">
                 </TextView>
                 <View
                     android:layout_width="10dp"
@@ -211,7 +211,7 @@
                     android:layout_width="1dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/theme_select9">
+                    android:background="@drawable/theme10">
                 </TextView>
                 <View
                     android:layout_width="6dp"
@@ -222,7 +222,7 @@
                     android:layout_width="1dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/theme_select10">
+                    android:background="@drawable/theme11">
                 </TextView>
                 <View
                     android:layout_width="6dp"
@@ -233,7 +233,7 @@
                     android:layout_width="1dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/theme_select11">
+                    android:background="@drawable/theme12">
                 </TextView>
                 <View
                     android:layout_width="10dp"

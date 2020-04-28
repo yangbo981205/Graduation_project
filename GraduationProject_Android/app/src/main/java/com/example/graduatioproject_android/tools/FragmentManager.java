@@ -20,7 +20,7 @@ import com.example.graduatioproject_android.R;
 
 import static com.example.graduatioproject_android.tools.GlobalVariable.FRAGMENTSELECT;
 import static com.example.graduatioproject_android.tools.GlobalVariable.ISVISIBLE;
-import static com.example.graduatioproject_android.tools.GlobalVariable.THEMEPICTURE;
+import static com.example.graduatioproject_android.tools.GlobalVariable.THEMENAME;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -57,7 +57,7 @@ public class FragmentManager extends FragmentActivity {
         controlTv.setOnClickListener(myListener);
         outdoorTv.setOnClickListener(myListener);
         myTv.setOnClickListener(myListener);
-        ThemeSet(THEMEPICTURE);//主题设置
+        ThemeSet(THEMENAME);//主题设置
 
 
         // 获取片段管理器
@@ -230,45 +230,45 @@ public class FragmentManager extends FragmentActivity {
      * 主题更换功能
      *
      * */
-    private void ThemeSet(int ThemeNumber){
-        if(ThemeNumber==100){
-            LayoutAll.setBackgroundResource(R.drawable.theme_default);
+    private void ThemeSet(String ThemeName){
+        if(ThemeName.equals("theme")){
+            LayoutAll.setBackgroundResource(R.drawable.theme);
             LayoutAll.getBackground().setAlpha(100);
-        }else if(ThemeNumber==0){
-            LayoutAll.setBackgroundResource(R.drawable.theme_select0);
+        }else if(ThemeName.equals("theme1")){
+            LayoutAll.setBackgroundResource(R.drawable.theme1);
             LayoutAll.getBackground().setAlpha(100);
-        }else if(ThemeNumber==1){
-            LayoutAll.setBackgroundResource(R.drawable.theme_select1);
+        }else if(ThemeName.equals("theme2")){
+            LayoutAll.setBackgroundResource(R.drawable.theme2);
             LayoutAll.getBackground().setAlpha(100);
-        }else if(ThemeNumber==2){
-            LayoutAll.setBackgroundResource(R.drawable.theme_select2);
+        }else if(ThemeName.equals("theme3")){
+            LayoutAll.setBackgroundResource(R.drawable.theme3);
             LayoutAll.getBackground().setAlpha(100);
-        }else if(ThemeNumber==3){
-            LayoutAll.setBackgroundResource(R.drawable.theme_select3);
+        }else if(ThemeName.equals("theme4")){
+            LayoutAll.setBackgroundResource(R.drawable.theme4);
             LayoutAll.getBackground().setAlpha(100);
-        }else if(ThemeNumber==4){
-            LayoutAll.setBackgroundResource(R.drawable.theme_select4);
+        }else if(ThemeName.equals("theme5")){
+            LayoutAll.setBackgroundResource(R.drawable.theme5);
             LayoutAll.getBackground().setAlpha(100);
-        }else if(ThemeNumber==5){
-            LayoutAll.setBackgroundResource(R.drawable.theme_select5);
+        }else if(ThemeName.equals("theme6")){
+            LayoutAll.setBackgroundResource(R.drawable.theme6);
             LayoutAll.getBackground().setAlpha(100);
-        }else if(ThemeNumber==6){
-            LayoutAll.setBackgroundResource(R.drawable.theme_select6);
+        }else if(ThemeName.equals("theme7")){
+            LayoutAll.setBackgroundResource(R.drawable.theme7);
             LayoutAll.getBackground().setAlpha(100);
-        }else if(ThemeNumber==7){
-            LayoutAll.setBackgroundResource(R.drawable.theme_select7);
+        }else if(ThemeName.equals("theme8")){
+            LayoutAll.setBackgroundResource(R.drawable.theme8);
             LayoutAll.getBackground().setAlpha(100);
-        }else if(ThemeNumber==8){
-            LayoutAll.setBackgroundResource(R.drawable.theme_select8);
+        }else if(ThemeName.equals("theme9")){
+            LayoutAll.setBackgroundResource(R.drawable.theme9);
             LayoutAll.getBackground().setAlpha(100);
-        }else if(ThemeNumber==9){
-            LayoutAll.setBackgroundResource(R.drawable.theme_select9);
+        }else if(ThemeName.equals("theme10")){
+            LayoutAll.setBackgroundResource(R.drawable.theme10);
             LayoutAll.getBackground().setAlpha(100);
-        }else if(ThemeNumber==10){
-            LayoutAll.setBackgroundResource(R.drawable.theme_select10);
+        }else if(ThemeName.equals("theme11")){
+            LayoutAll.setBackgroundResource(R.drawable.theme11);
             LayoutAll.getBackground().setAlpha(100);
-        }else if(ThemeNumber==11){
-            LayoutAll.setBackgroundResource(R.drawable.theme_select11);
+        }else if(ThemeName.equals("theme12")){
+            LayoutAll.setBackgroundResource(R.drawable.theme12);
             LayoutAll.getBackground().setAlpha(100);
         }
     }

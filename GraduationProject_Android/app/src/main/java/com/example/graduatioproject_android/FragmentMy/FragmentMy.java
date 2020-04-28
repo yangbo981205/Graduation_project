@@ -21,6 +21,9 @@ import com.example.graduatioproject_android.R;
 
 import java.util.Calendar;
 
+import static com.example.graduatioproject_android.tools.GlobalVariable.NICKNAME;
+import static com.example.graduatioproject_android.tools.GlobalVariable.USERNAME;
+
 public class FragmentMy extends Fragment {
 
     private ImageView headIv=null;
@@ -55,6 +58,9 @@ public class FragmentMy extends Fragment {
         sectionBtn=(Button) view.findViewById(R.id.sectionBtn);
         exitloginBtn=(Button) view.findViewById(R.id.exitloginBtn);
         myListener=new MyListener();
+
+        nicknameTv.setText(NICKNAME);
+        numbernameTv.setText(USERNAME);
 
         headIv.setOnClickListener(myListener);
         themeTv.setOnClickListener(myListener);
@@ -107,7 +113,7 @@ public class FragmentMy extends Fragment {
                     builder.create().show();
                     break;
                 case(R.id.sectionBtn):
-                    Intent section_jumpIntent=new Intent(getActivity(), SectionActivity.class);
+                    Intent section_jumpIntent=new Intent(getActivity(), SetCEActivity.class);
                     startActivity(section_jumpIntent);
                     break;
                 case(R.id.exitloginBtn):

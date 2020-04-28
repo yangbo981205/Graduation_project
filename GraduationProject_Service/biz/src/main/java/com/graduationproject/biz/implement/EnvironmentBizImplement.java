@@ -40,4 +40,9 @@ public class EnvironmentBizImplement implements EnvironmentBiz {
     public List<Environment> getAll() {
         return environmentDao.selectAll();
     }
+
+    @Override
+    public List<Environment> getLimit() {
+        return environmentDao.selectLimit();
+    }
 }

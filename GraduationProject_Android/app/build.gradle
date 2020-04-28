@@ -26,7 +26,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
-    implementation files('libs/android-async-http-1.4.9.jar')
-    implementation files('libs/httpclient-4.3.6.jar')
+    implementation 'com.squareup.okhttp3:okhttp:4.5.0'
+    implementation 'com.github.xxl6097:okhttputils:2.4.1'
 
 }

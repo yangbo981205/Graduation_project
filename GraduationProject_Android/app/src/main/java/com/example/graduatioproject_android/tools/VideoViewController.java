@@ -31,13 +31,11 @@ public class VideoViewController {
         videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @Override
             public void onPrepared(MediaPlayer mp) {
-                Log.i("************", "call back after media file registing.");
                 loadingDialog.dismiss();
             }
         });
         videoView.releasePointerCapture();
         videoView.setVideoURI(Uri.parse(videoUrl));
-        videoView.requestFocus();
         videoView.start();
     }
 }

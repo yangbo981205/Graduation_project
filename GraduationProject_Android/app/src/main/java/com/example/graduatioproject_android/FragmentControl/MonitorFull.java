@@ -107,7 +107,9 @@ public class MonitorFull extends AppCompatActivity {
             mPressedTime = mNowTime;
         }
         else{
-            videoMonitorFull.stopPlayback();
+            if (videoMonitorFull.isPlaying()==true){
+                videoMonitorFull.stopPlayback();
+            }
             this.finish();
         }
     }

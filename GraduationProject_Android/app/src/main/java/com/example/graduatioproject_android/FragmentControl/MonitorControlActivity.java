@@ -110,7 +110,9 @@ public class MonitorControlActivity extends AppCompatActivity{
      * */
     @Override
     public void onBackPressed() {
-        videoMonitor.stopPlayback();
+        if (videoMonitor.isPlaying()==true){
+            videoMonitor.stopPlayback();
+        }
         this.finish();
     }
 

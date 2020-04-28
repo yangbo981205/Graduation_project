@@ -11,4 +11,5 @@ public interface EnvironmentBiz {
     void remove(String time);
     Environment get(String time);
     List<Environment> getAll();
+    List<Environment> getLimit();
 }

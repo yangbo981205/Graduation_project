@@ -6,17 +6,26 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.graduatioproject_android.R;
+import com.example.graduatioproject_android.tools.JSONTOOL;
 import com.example.graduatioproject_android.tools.MusicPlayer;
+import com.zhy.http.okhttp.OkHttpUtils;
+import com.zhy.http.okhttp.callback.StringCallback;
 
-import org.w3c.dom.Text;
+import java.util.HashMap;
+import java.util.List;
+
+import okhttp3.Call;
 
 import static com.example.graduatioproject_android.tools.GlobalVariable.MUSICNAME;
+import static com.example.graduatioproject_android.tools.GlobalVariable.SERVERIP;
+import static com.example.graduatioproject_android.tools.GlobalVariable.THEMENAME;
+import static com.example.graduatioproject_android.tools.GlobalVariable.USERNAME;
 import static com.example.graduatioproject_android.tools.MusicPlayer.mediaPlayer;
 
 public class VoiceActivity extends AppCompatActivity {
@@ -102,35 +111,35 @@ public class VoiceActivity extends AppCompatActivity {
                     break;
                 case(R.id.music1LL):
                     if(mediaPlayer!=null && mediaPlayer.isPlaying())mediaPlayer.stop();
-                    music.musicPlayer(VoiceActivity.this,"music_default.mp3");
+                    music.musicPlayer(VoiceActivity.this, "music.mp3");
                     break;
                 case(R.id.music2LL):
                     if(mediaPlayer!=null && mediaPlayer.isPlaying())mediaPlayer.stop();
-                    music.musicPlayer(VoiceActivity.this,"music_dddd.mp3");
+                    music.musicPlayer(VoiceActivity.this, "music3.mp3");
                     break;
                 case(R.id.music3LL):
                     if(mediaPlayer!=null && mediaPlayer.isPlaying())mediaPlayer.stop();
-                    music.musicPlayer(VoiceActivity.this,"music_chezhan.mp3");
+                    music.musicPlayer(VoiceActivity.this, "music2.mp3");
                     break;
                 case(R.id.music4LL):
                     if(mediaPlayer!=null && mediaPlayer.isPlaying())mediaPlayer.stop();
-                    music.musicPlayer(VoiceActivity.this,"music_dida.mp3");
+                    music.musicPlayer(VoiceActivity.this, "music4.mp3");
                     break;
                 case(R.id.music5LL):
                     if(mediaPlayer!=null && mediaPlayer.isPlaying())mediaPlayer.stop();
-                    music.musicPlayer(VoiceActivity.this,"music_didi.mp3");
+                    music.musicPlayer(VoiceActivity.this, "music5.mp3");
                     break;
                 case(R.id.music6LL):
                     if(mediaPlayer!=null && mediaPlayer.isPlaying())mediaPlayer.stop();
-                    music.musicPlayer(VoiceActivity.this,"music_guo.mp3");
+                    music.musicPlayer(VoiceActivity.this, "music6.mp3");
                     break;
                 case(R.id.music7LL):
                     if(mediaPlayer!=null && mediaPlayer.isPlaying())mediaPlayer.stop();
-                    music.musicPlayer(VoiceActivity.this,"music_huanle.mp3");
+                    music.musicPlayer(VoiceActivity.this, "music7.mp3");
                     break;
                 case(R.id.music8LL):
                     if(mediaPlayer!=null && mediaPlayer.isPlaying())mediaPlayer.stop();
-                    music.musicPlayer(VoiceActivity.this,"music_niaoming.mp3");
+                    music.musicPlayer(VoiceActivity.this, "music1.mp3");
                     break;
                 case(R.id.noMusicRB):
                     AlertDialog.Builder builder=new AlertDialog.Builder(VoiceActivity.this);
@@ -139,7 +148,8 @@ public class VoiceActivity extends AppCompatActivity {
                     builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            MUSICNAME=null;
+                            MUSICNAME="null";
+                            uploadVoice();
                         }
                     });
                     builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
@@ -156,7 +166,8 @@ public class VoiceActivity extends AppCompatActivity {
                     builder1.setPositiveButton("确定", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            MUSICNAME="music_default.mp3";
+                            MUSICNAME= "music.mp3";
+                            uploadVoice();
                         }
                     });
                     builder1.setNegativeButton("取消", new DialogInterface.OnClickListener() {
@@ -173,7 +184,8 @@ public class VoiceActivity extends AppCompatActivity {
                     builder2.setPositiveButton("确定", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            MUSICNAME="music_dddd.mp3";
+                            MUSICNAME= "music3.mp3";
+                            uploadVoice();
                         }
                     });
                     builder2.setNegativeButton("取消", new DialogInterface.OnClickListener() {
@@ -190,7 +202,8 @@ public class VoiceActivity extends AppCompatActivity {
                     builder3.setPositiveButton("确定", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            MUSICNAME="music_chezhan.mp3";
+                            MUSICNAME= "music2.mp3";
+                            uploadVoice();
                         }
                     });
                     builder3.setNegativeButton("取消", new DialogInterface.OnClickListener() {
@@ -207,7 +220,8 @@ public class VoiceActivity extends AppCompatActivity {
                     builder4.setPositiveButton("确定", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            MUSICNAME="music_dida.mp3";
+                            MUSICNAME= "music4.mp3";
+                            uploadVoice();
                         }
                     });
                     builder4.setNegativeButton("取消", new DialogInterface.OnClickListener() {
@@ -224,7 +238,8 @@ public class VoiceActivity extends AppCompatActivity {
                     builder5.setPositiveButton("确定", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            MUSICNAME="music_didi.mp3";
+                            MUSICNAME= "music5.mp3";
+                            uploadVoice();
                         }
                     });
                     builder5.setNegativeButton("取消", new DialogInterface.OnClickListener() {
@@ -241,7 +256,8 @@ public class VoiceActivity extends AppCompatActivity {
                     builder6.setPositiveButton("确定", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            MUSICNAME="music_guo.mp3";
+                            MUSICNAME= "music6.mp3";
+                            uploadVoice();
                         }
                     });
                     builder6.setNegativeButton("取消", new DialogInterface.OnClickListener() {
@@ -258,7 +274,8 @@ public class VoiceActivity extends AppCompatActivity {
                     builder7.setPositiveButton("确定", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            MUSICNAME="music_huanle.mp3";
+                            MUSICNAME= "music7.mp3";
+                            uploadVoice();
                         }
                     });
                     builder7.setNegativeButton("取消", new DialogInterface.OnClickListener() {
@@ -275,7 +292,8 @@ public class VoiceActivity extends AppCompatActivity {
                     builder8.setPositiveButton("确定", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            MUSICNAME="music_niaoming.mp3";
+                            MUSICNAME= "music1.mp3";
+                            uploadVoice();
                         }
                     });
                     builder8.setNegativeButton("取消", new DialogInterface.OnClickListener() {
@@ -289,5 +307,29 @@ public class VoiceActivity extends AppCompatActivity {
                     break;
             }
         }
+    }
+
+    /**
+     * 向服务器上传theme设置
+     * */
+    private void uploadVoice(){
+        OkHttpUtils.post()
+                .url("http://"+SERVERIP+":8080/graduationproject/android/uploadvoice")
+                . addParams("username", USERNAME)
+                . addParams("voice", MUSICNAME)
+                .build()
+                .execute(new StringCallback() {
+                    @Override
+                    public void onError(Call call, Exception e) {
+                        Toast.makeText(VoiceActivity.this, "服务器错误，请检查网络连接！", Toast.LENGTH_SHORT).show();
+                    }
+                    @Override
+                    public void onResponse(Call call, String s) {
+                        List<HashMap<String,String>> map = JSONTOOL.analyze_some_json("["+s+"]");
+                        if(map.get(0).get("state").equals("1")){
+                            Toast.makeText(VoiceActivity.this,"更换成功！",Toast.LENGTH_LONG).show();
+                        }
+                    }
+                });
     }
 }

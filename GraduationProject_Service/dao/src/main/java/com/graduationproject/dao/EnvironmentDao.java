@@ -13,4 +13,5 @@ public interface EnvironmentDao {
     void delete(String time);
     Environment select(String time);
     List<Environment> selectAll();
+    List<Environment> selectLimit();
 }

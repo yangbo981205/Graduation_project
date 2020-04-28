@@ -411,6 +411,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
                         android:textSize="18dp"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#c9c9c9">
+                    </View>
                 </RadioGroup>
             </LinearLayout>
 

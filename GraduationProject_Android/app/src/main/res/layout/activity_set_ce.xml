@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center|top"
+    tools:context=".FragmentMy.SetCEActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#3c3c3c">
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="30dp"/>
+        <TextView
+            android:id="@+id/exitCETV"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@mipmap/icon_exit"
+            />
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="30dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="环境设置"
+            android:textSize="20dp"
+            android:textColor="#f4f4f4"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:gravity="center|left"
+            android:text="● 当前设置"
+            android:textSize="20dp"
+            android:textStyle="bold">
+        </TextView>
+
+        <com.example.graduatioproject_android.tools.SlideButton
+            android:id="@+id/slideButton"
+            android:layout_width="65dp"
+            android:layout_height="30dp">
+
+        </com.example.graduatioproject_android.tools.SlideButton>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="365dp"
+        android:layout_height="5dp"
+        android:background="@drawable/bg_cut2">
+    </View>
+
+    <TextView
+        android:layout_width="365dp"
+        android:layout_height="50dp"
+        android:gravity="center|left"
+        android:text="● 当前设置"
+        android:textSize="20dp"
+        android:textStyle="bold">
+    </TextView>
+
+    <View
+        android:layout_width="365dp"
+        android:layout_height="2dp"
+        android:background="#e4e4e4">
+    </View>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp">
+    </View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:orientation="vertical">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableRow
+                android:gravity="center">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="最高温度："
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    />
+                <TextView
+                    android:id="@+id/maxTemNow"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="最低温度："
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    />
+                <TextView
+                    android:id="@+id/minTemNow"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:gravity="center"
+                    />
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp">
+            </View>
+
+            <TableRow
+                android:gravity="center">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="最大湿度："
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    />
+                <TextView
+                    android:id="@+id/maxHumNow"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:gravity="center"
+                    />
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="最小湿度："
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    />
+                <TextView
+                    android:id="@+id/minHumNow"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:gravity="center"
+                    />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="365dp"
+        android:layout_height="5dp"
+        android:background="@drawable/bg_cut2">
+    </View>
+
+    <TextView
+        android:layout_width="365dp"
+        android:layout_height="60dp"
+        android:gravity="center|left"
+        android:text="● 更改设置"
+        android:textSize="20dp"
+        android:textStyle="bold">
+    </TextView>
+
+    <View
+        android:layout_width="365dp"
+        android:layout_height="2dp"
+        android:background="#e4e4e4">
+    </View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:orientation="vertical">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableRow
+                android:gravity="center">
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="65dp"
+                    android:text="最高温度："
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    />
+                <SeekBar
+                    android:id="@+id/maxTemSB"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:progress="0"
+                    android:max="100"
+                    />
+
+                <TextView
+                    android:id="@+id/maxTemTV"
+                    android:layout_width="70dp"
+                    android:layout_height="50dp"
+                    android:textSize="16dp"
+                    android:gravity="center"
+                    />
+            </TableRow>
+
+            <TableRow
+                android:gravity="center">
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="65dp"
+                    android:text="最低温度："
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    />
+                <SeekBar
+                    android:id="@+id/minTemSB"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:progress="0"
+                    android:max="100"
+                    />
+                <TextView
+                    android:id="@+id/minTemTV"
+                    android:layout_width="70dp"
+                    android:layout_height="50dp"
+                    android:textSize="16dp"
+                    android:gravity="center"
+                    />
+
+            </TableRow>
+
+            <TableRow
+                android:gravity="center">
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="65dp"
+                    android:text="最大湿度："
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    />
+                <SeekBar
+                    android:id="@+id/maxHumSB"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:progress="0"
+                    android:max="100"
+                    />
+                <TextView
+                    android:id="@+id/maxHumTV"
+                    android:layout_width="70dp"
+                    android:layout_height="50dp"
+                    android:textSize="16dp"
+                    android:gravity="center"
+                    />
+
+            </TableRow>
+
+            <TableRow
+                android:gravity="center">
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="65dp"
+                    android:text="最小湿度："
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    />
+                <SeekBar
+                    android:id="@+id/minHumSB"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:progress="0"
+                    android:max="100"
+                    />
+                <TextView
+                    android:id="@+id/minHumTV"
+                    android:layout_width="70dp"
+                    android:layout_height="50dp"
+                    android:textSize="16dp"
+                    android:gravity="center"
+                    />
+            </TableRow>
+
+        </TableLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/saveChangeBtn"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:background="@drawable/style_button_exit"
+        android:text="保存设置"
+        android:textSize="18dp" />
+
+</LinearLayout>

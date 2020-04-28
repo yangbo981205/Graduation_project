@@ -29,4 +29,8 @@
         select * from environment
     </select>
 
+    <select id="selectLimit" resultMap="environment">
+        select * from environment order by time desc limit 10
+    </select>
+
 </mapper>

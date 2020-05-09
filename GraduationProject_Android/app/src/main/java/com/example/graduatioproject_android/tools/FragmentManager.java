@@ -230,7 +230,7 @@ public class FragmentManager extends FragmentActivity {
      * 主题更换功能
      *
      * */
-    private void ThemeSet(String ThemeName){
+    public void ThemeSet(String ThemeName){
         if(ThemeName.equals("theme")){
             LayoutAll.setBackgroundResource(R.drawable.theme);
             LayoutAll.getBackground().setAlpha(100);

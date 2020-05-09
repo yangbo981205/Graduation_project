@@ -99,12 +99,6 @@
                         <span class="sidebar-title">环境记录</span>
                     </a>
                 </li>
-                <li class="active">
-                    <a href="/claim_voucher/self">
-                        <span class="glyphicon glyphicon-book"></span>
-                        <span class="sidebar-title">操作日志查询</span>
-                    </a>
-                </li>
                 <li class="sidebar-label pt15">管理互动</li>
                 <li class="active">
                     <a href="/graduationproject/information/list_users">

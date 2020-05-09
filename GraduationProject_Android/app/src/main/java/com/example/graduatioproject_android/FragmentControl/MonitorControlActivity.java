@@ -92,7 +92,6 @@ public class MonitorControlActivity extends AppCompatActivity{
                     }
                     break;
                 case(R.id.setMonitorFull):
-                    //Toast.makeText(getApplicationContext(),"1111111111111",Toast.LENGTH_LONG).show();
                     videoMonitor.stopPlayback();
                     Intent jumpIntent_monitor_full=new Intent(MonitorControlActivity.this, MonitorFull.class);
                     startActivity(jumpIntent_monitor_full);

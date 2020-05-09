@@ -18,6 +18,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.graduatioproject_android.LoginAndRegister.LoginActivity;
 import com.example.graduatioproject_android.R;
+import com.example.graduatioproject_android.tools.DestroyActivityUtil;
 
 import java.util.Calendar;
 
@@ -118,8 +119,10 @@ public class FragmentMy extends Fragment {
                     break;
                 case(R.id.exitloginBtn):
                     Intent exit_jumpIntent=new Intent(getActivity(), LoginActivity.class);
+                    exit_jumpIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);//置于顶栈
                     startActivity(exit_jumpIntent);
-                    getActivity().finish();
+                    DestroyActivityUtil destroyActivityUtil = new DestroyActivityUtil();//调用tools销毁所有activity的方法
+                    destroyActivityUtil.exit();
                     break;
                 default:
                     break;

@@ -63,12 +63,6 @@ public class LoginActivity extends AppCompatActivity {
         public void onClick(View view) {
             switch (view.getId()){
                 case(R.id.loginBtn):
-
-//                    Toast.makeText(LoginActivity.this, "登陆成功！", Toast.LENGTH_SHORT).show();
-//                    Intent jumpIntent=new Intent(LoginActivity.this, FragmentManager.class);
-//                    FRAGMENTSELECT=0;
-//                    startActivity(jumpIntent);
-
                     OkHttpUtils.post()
                             .url("http://"+SERVERIP+":8080/graduationproject/android/login")
                             . addParams("username", String.valueOf(usernameEt.getText()))

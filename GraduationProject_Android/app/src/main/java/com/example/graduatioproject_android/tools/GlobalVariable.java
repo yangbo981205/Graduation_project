@@ -2,8 +2,13 @@ package com.example.graduatioproject_android.tools;
 
 import android.graphics.Point;
 
+import java.util.HashMap;
+import java.util.List;
+
 public class GlobalVariable {
     public static String SERVERIP="10.0.116.25";
+    public static List<HashMap<String,String>> environmentMap;
+
 
 
     public static String USERNAME=null;

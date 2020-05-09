@@ -8,14 +8,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="300dp"
+        android:gravity="center"
         android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="最后画折线图，弄不出来就去掉"
-            android:textSize="24dp">
-        </TextView>
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/smogLineChart"
+            android:layout_width="360dp"
+            android:layout_height="300dp">
+
+        </com.github.mikephil.charting.charts.LineChart>
 
     </LinearLayout>
 

@@ -48,11 +48,11 @@ public class InformActivity extends AppCompatActivity {
         List<InformItem> informItems=new ArrayList<>();//创建对象集合
         informItems.clear();
 
-        InformItem informItem=new InformItem("这是一条通知");
+        InformItem informItem=new InformItem("root","这是一条通知");
         informItems.add(informItem);
-        InformItem informItem1=new InformItem("这是另一条通知");
+        InformItem informItem1=new InformItem("root","这是另一条通知");
         informItems.add(informItem1);
-        InformItem informItem2=new InformItem("这是另二条通知");
+        InformItem informItem2=new InformItem("root","这是也是一条通知");
         informItems.add(informItem2);
 
         InformAdapter informAdapter=new InformAdapter(informItems,this);
@@ -66,6 +66,7 @@ public class InformActivity extends AppCompatActivity {
         private List<InformItem> informItems;
         private LayoutInflater inflater;
         private TextView InformItemTV=null;
+        private TextView AdminTV=null;
 
         public InformAdapter (List<InformItem> informItems, Context context){
             this.informItems=informItems;
@@ -93,7 +94,9 @@ public class InformActivity extends AppCompatActivity {
             InformItem informItem=(InformItem) getItem(position);
 
             InformItemTV=(TextView)view.findViewById(R.id.InformItemTV);
+            AdminTV=(TextView)view.findViewById(R.id.AdminTV);
             InformItemTV.setText(informItem.Informs);
+            AdminTV.setText(informItem.Admin);
             return view;
         }
     }
@@ -103,7 +106,16 @@ public class InformActivity extends AppCompatActivity {
      * 每一个通知的类
      * */
     public class InformItem{
+        String Admin=null;
         String Informs=null;
+
+        public String getAdmin() {
+            return Admin;
+        }
+
+        public void setAdmin(String admin) {
+            Admin = admin;
+        }
 
         public String getInforms() {
             return Informs;
@@ -113,7 +125,8 @@ public class InformActivity extends AppCompatActivity {
             Informs = informs;
         }
 
-        private InformItem(String Informs){
+        private InformItem(String Admin,String Informs){
+            this.Admin=Admin;
             this.Informs=Informs;
         }
     }

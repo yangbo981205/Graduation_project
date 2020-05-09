@@ -22,6 +22,8 @@ import com.zhy.http.okhttp.callback.StringCallback;
 import java.text.DecimalFormat;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import okhttp3.Call;
 
@@ -49,6 +51,7 @@ public class SetCEActivity extends AppCompatActivity {
     private SlideButton slideButton=null;
     private SlideButton.SlideButtonOnCheckedListener slideButtonOnCheckedListener;
     private MyListener myListener;
+    private Boolean state;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,9 +81,26 @@ public class SetCEActivity extends AppCompatActivity {
         slideButtonOnCheckedListener=new SlideButton.SlideButtonOnCheckedListener() {
             @Override
             public void onCheckedChangeListener(boolean isChecked) {
+                final Timer timer=new Timer();
+                final TimerTask timerTask=new TimerTask(){
+                    @Override
+                    public void run() {
+                        if(state==true){
+                            AutoControl();
+                        }else{
+                            timer.cancel();
+                            timer.purge();
+                        }
+                    }
+                };
                 if(String.valueOf(isChecked).equals("true")){
+                    state=true;
+                    Toast.makeText(SetCEActivity.this, "服务已开启", Toast.LENGTH_SHORT).show();
+                    timer.schedule(timerTask, 0,5000);
                     SRTCOMFORTABLRENVIRONMENT=true;
                 }else{
+                    state=false;
+                    Toast.makeText(SetCEActivity.this, "服务已关闭", Toast.LENGTH_SHORT).show();
                     SRTCOMFORTABLRENVIRONMENT=false;
                 }
             }
@@ -89,6 +109,9 @@ public class SetCEActivity extends AppCompatActivity {
         slideButton.setOnCheckedListener(slideButtonOnCheckedListener);
         exitCETV.setOnClickListener(myListener);
         saveChangeBtn.setOnClickListener(myListener);
+
+
+
 
 
         DataInit();
@@ -245,6 +268,27 @@ public class SetCEActivity extends AppCompatActivity {
                         minTemNow.setText(mapResult.get(0).get("min_temperature"));
                         maxHumNow.setText(mapResult.get(0).get("max_humidity"));
                         minHumNow.setText(mapResult.get(0).get("min_humidity"));
+                    }
+                });
+    }
+
+
+    /**
+     * 自动控制方法
+     * */
+    private void AutoControl(){
+        OkHttpUtils.post()
+                .url("http://"+SERVERIP+":8080/graduationproject/android/autocontrol")
+                . addParams("username", USERNAME)
+                .build()
+                .execute(new StringCallback() {
+                    @Override
+                    public void onError(Call call, Exception e) {
+                        Toast.makeText(SetCEActivity.this, "服务器错误，请检查网络连接！", Toast.LENGTH_SHORT).show();
+                    }
+                    @Override
+                    public void onResponse(Call call, String s) {
+                        System.out.println(s);
                     }
                 });
     }
